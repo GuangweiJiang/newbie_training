@@ -14,5 +14,5 @@ Training #9	Use NDK to build JNI shared library
 Notes:
 For "Course#01 Linux Developing introduce",
 Please click "read" button on below link, and enjoy the training 
-(the link only work for wistron internal network),
+(the link only works for Wistron internal network),
 http://elearnwksrd.wistron.com.cn/xms/data/246/content/0278FCF482B568A7196F/text/index.html
