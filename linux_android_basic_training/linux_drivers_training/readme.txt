@@ -11,3 +11,8 @@ Training #7	Building Kernel image for goldfish(emulator)
 Training #8	Building Android application
 Training #9	Use NDK to build JNI shared library
 
+Notes:
+For "Course#01 Linux Developing introduce",
+Please click "read" button on below link, and enjoy the training 
+(the link only work for wistron internal network),
+http://elearnwksrd.wistron.com.cn/xms/data/246/content/0278FCF482B568A7196F/text/index.html

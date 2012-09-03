@@ -13,3 +13,10 @@ Training #09	Study "BroadcastReceiver"
 Training #10	Study data store  technology (Preferences, Files, Databases, Network) and Content Provider
 Training #11	Use NDK to build JNI shared library
 
+
+Notes:
+For "Course#01 Android Developing introduce",
+Please click "read" button on below link, and enjoy the training 
+(the link only work for wistron internal network),
+http://elearnwksrd.wistron.com.cn/xms/data/247/content/F209617A239A8D1327D6/text/index.html
+
