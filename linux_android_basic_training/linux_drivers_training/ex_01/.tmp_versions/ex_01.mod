@@ -1,2 +1,0 @@
-/home/william/Allan/newbie_training/linux_android_basic_training/linux_drivers_training/ex_01/ex_01.ko
-/home/william/Allan/newbie_training/linux_android_basic_training/linux_drivers_training/ex_01/ex_01.o
