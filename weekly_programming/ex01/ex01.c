@@ -58,17 +58,15 @@ int main(void)
 	begin=clock();
 	int num[N];
 	int i,j;
-//	for(j=0;j<10;j++)
-//	{
-		int *p=(int*)malloc(N*sizeof(int));
-		for(i=0;i<N;i++)
-			num[i]=rand()%456;
-		quicksort(num,0,sizeof(num)/sizeof(int)-1);
-		outsort(num,sizeof(num)/sizeof(int));
-		free(p);
-//	}
+	int *p=(int*)malloc(N*sizeof(int));//申请内存空间
+	if(p==NULL)return;
+	for(i=0;i<N;i++)
+		num[i]=rand()%456+199;//生成随机数
+	quicksort(num,0,sizeof(num)/sizeof(int)-1);
+	outsort(num,sizeof(num)/sizeof(int));
+	free(p);
 	end =clock();
-	cost=(double)(end-begin)/CLOCKS_PER_SEC;
+	cost=(double)(end-begin)/CLOCKS_PER_SEC;//计算时间
 	printf("%5.1lf seconds\n",cost);
 	return 0;
 }
