@@ -8,5 +8,12 @@ Root Cause: N/A
 
 This is Allan's daily report 20120912:  
  
-   This is my second day of work. As a newbie,there are so much new things for me. Yesterday,our leader told me what I will learn in the next three mounths.Although the task is difficult,but I will try my best to do it well.
-   By yesterday,I had not konwn how to manage the codes. Now I have learned to use the tool called git to do that. We use it not only offline but also online. We can easily share our codes with others so that the codes would be improved. Next,there will be more new things to learn,I have confidence to be able to learn it well.
+   This is my second day of work. As a newbie,there are so much new
+things for me. Yesterday,our leader told me what I will learn in
+the next three mounths.Although the task is difficult,but I will
+try my best to do it well.
+   By yesterday,I had not konwn how to manage the codes. Now I have
+learned to use the tool called git to do that. We use it not only
+offline but also online. We can easily share our codes with others so
+that the codes would be improved. Next,there will be more new things
+to learn,I have confidence to be able to learn it well.
