@@ -1,13 +1,4 @@
-Owner: Allan xing
 
-Issue: N/A
-
-Description: Daily report
-
-Root Cause: N/A
-
-This is Allan's daily report 20120912:  
- 
    This is my second day of work. As a newbie,there are so much new
 things for me. Yesterday,our leader told me what I will learn in
 the next three mounths.Although the task is difficult,but I will

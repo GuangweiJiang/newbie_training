@@ -1,12 +1,3 @@
-Owner: Allan xing
-
-Issue: N/A
-
-Description: Daily report
-
-Root Cause: N/A
-
-This is Allan's daily report 20120917:
 
   We have our dream,then we determine the direction and try to make it. After 
 graduation,we will be faced with work. Before going to work,we must know what 
