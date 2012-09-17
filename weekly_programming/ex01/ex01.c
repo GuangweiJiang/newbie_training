@@ -11,7 +11,7 @@
 #include <malloc.h>
 #include <time.h>
 
-#define N 10000
+#define N 10000000
 
 //Data exchange
 void swap(int *p, int *q)
@@ -69,20 +69,15 @@ int main(void)
 {
 	clock_t begin,end;
 	double cost;
-	time_t t;
-//	int array[10]={9,8,7,6,5,4,3,2,1,0};
-//	quicksort(array,0,sizeof(array)/sizeof(int)-1);
-//	outsort(array);
 	begin=clock();
 	int i,j;
-	int *num=0;
-	num=(int*)malloc(10*sizeof(int));//申请内存空间
+	int *num;
+        num=(int*)malloc(N*sizeof(int));//申请内存空间
 	if(num==0)return;
-	srand((unsigned)time(&t));
+	srand((unsigned)time(NULL));
 	for(i=0;i<N;i++)
 		num[i]=rand()%456;//生成随机数
 	//	printf("%d ",p[i]);
-//	outsort(num);
 	mopop(num);	
 //	quicksort(num,0,sizeof(num)/sizeof(int)-1);
 	outsort(num);

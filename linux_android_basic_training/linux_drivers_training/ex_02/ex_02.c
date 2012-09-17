@@ -1,14 +1,16 @@
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/cdev.h>
+#include <linux/fs.h>
+#include <linux/cdev.h>
 
 unsigned int major = 0;
 unsigned int minor = 0;
 dev_t devno;
 
-struct cdev test_dev;
+struct cdev test_cdev;
 struct file_operations test_fops;
-
+/*
 static int char_open(void)
 {
 	return 0;
@@ -32,7 +34,7 @@ static long char_iotcl(void)
 	return 0;
 }
 
-static const struct file_operation fops = {
+static const struct file_operation test_fops = {
 	.open		= char_open,
 	.close		= char_close,
 	.read		= char_read,
@@ -40,7 +42,7 @@ static const struct file_operation fops = {
 	.compat_iotcl=char_iotcl,
 	.owner		= THIS_MODULE
 };
-
+*/
 static int __init char_init(void)
 {
 	//1 登记设备号
@@ -55,7 +57,7 @@ static int __init char_init(void)
 	//初始化设备
 	cdev_init(&test_cdev,&test_fops);
 	//添加cdev到内核
-	cdev_add(&test_cdev,&test_fops,1);
+	cdev_add(&test_cdev,devno,1);
 
 	printk("Hello kernel\n");
 	return 0;
