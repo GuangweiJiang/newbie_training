@@ -11,7 +11,7 @@
 #include <malloc.h>
 #include <time.h>
 
-#define N 1000000
+#define N 10000
 
 //Data exchange
 void swap(int *p, int *q)
@@ -41,30 +41,52 @@ void quicksort(int p[],int start,int end)
 	}
 }
 //print data
-void outsort(int *p,int size)
+void outsort(int *p)
 {
 	int i;
-	for(i=0;i<size;i++)
+	for(i=0;i<N;i++)
 	{
 		printf("%d ",p[i]);
 	}
 	printf("\n");
+}
+void mopop(int p[])
+{
+	int i,j,flag;
+	for(i=0;i<N-1;i++){
+		flag=1;
+		for(j=0;j<N-i-1;j++){
+			if(p[j]>p[j+1]){
+				swap(&p[j],&p[j+1]);
+				flag=0;
+			}
+		}
+		if(1==flag)break;
+	}
 }
 
 int main(void)
 {
 	clock_t begin,end;
 	double cost;
+	time_t t;
+//	int array[10]={9,8,7,6,5,4,3,2,1,0};
+//	quicksort(array,0,sizeof(array)/sizeof(int)-1);
+//	outsort(array);
 	begin=clock();
-	int num[N];
 	int i,j;
-	int *p=(int*)malloc(N*sizeof(int));//申请内存空间
-	if(p==NULL)return;
+	int *num=0;
+	num=(int*)malloc(10*sizeof(int));//申请内存空间
+	if(num==0)return;
+	srand((unsigned)time(&t));
 	for(i=0;i<N;i++)
-		num[i]=rand()%456+199;//生成随机数
-	quicksort(num,0,sizeof(num)/sizeof(int)-1);
-	outsort(num,sizeof(num)/sizeof(int));
-	free(p);
+		num[i]=rand()%456;//生成随机数
+	//	printf("%d ",p[i]);
+//	outsort(num);
+	mopop(num);	
+//	quicksort(num,0,sizeof(num)/sizeof(int)-1);
+	outsort(num);
+	free(num);
 	end =clock();
 	cost=(double)(end-begin)/CLOCKS_PER_SEC;//计算时间
 	printf("%5.1lf seconds\n",cost);
