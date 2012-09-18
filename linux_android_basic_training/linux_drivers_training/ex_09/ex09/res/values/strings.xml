@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="hello">ex07, it show how to call ioctl via jni</string>
-    <string name="app_name">ex07, call ioctl via ioctl</string>
-</resources>
