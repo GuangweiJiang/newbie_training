@@ -14,32 +14,11 @@
 #define N 10000000
 
 //Data exchange
-void swap(int *p, int *q)
+int comp(const void *a,const void *b)
 {
-	int t;
-	t=*p;
-	*p=*q;
-	*q=t;
+	return *(int*)a-*(int*)b;
 }
-//sort data
-void quicksort(int p[],int start,int end)
-{
-	int i,j,center;
-	if(start<end){
-		center=(start+end)/2;
-		i=start-1;
-		j=end+1;
-		while(1){
-			while(p[++i]<p[center]);
-			while(p[center]<p[--j]);
-			if(i>=j)
-				break;
-			swap(&p[i],&p[j]);
-		}
-		quicksort(p,start,i-1);
-		quicksort(p,j+1,end);
-	}
-}
+
 //print data
 void outsort(int *p)
 {
@@ -49,20 +28,6 @@ void outsort(int *p)
 		printf("%d ",p[i]);
 	}
 	printf("\n");
-}
-void mopop(int p[])
-{
-	int i,j,flag;
-	for(i=0;i<N-1;i++){
-		flag=1;
-		for(j=0;j<N-i-1;j++){
-			if(p[j]>p[j+1]){
-				swap(&p[j],&p[j+1]);
-				flag=0;
-			}
-		}
-		if(1==flag)break;
-	}
 }
 
 int main(void)
@@ -76,10 +41,8 @@ int main(void)
 	if(num==0)return;
 	srand((unsigned)time(NULL));
 	for(i=0;i<N;i++)
-		num[i]=rand()%456;//生成随机数
-	//	printf("%d ",p[i]);
-	mopop(num);	
-//	quicksort(num,0,sizeof(num)/sizeof(int)-1);
+		num[i]=rand()%45600;//生成随机数
+	qsort(num,N,sizeof(int),comp);
 	outsort(num);
 	free(num);
 	end =clock();
