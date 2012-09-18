@@ -1,10 +1,10 @@
 Linux driver training material - exercise 07
-by guangwei@Jan21'10
+by guangwei@Sep18'12
 
 Targets:
-	1. Be familiar with android emulator.
-	2. Build kernel image of goldfish and run it in the emulator.
-	3. Add your own kernel driver to the goldfish.
+	1. Be familiar with android emulator(or real android device, such as Bohai, t-lite).
+	2. Build kernel image of goldfish(or real android device) and run it in the emulator(or real android device).
+	3. Add your own kernel driver to the goldfish(or real android device).
 
 Test Enviroment:
 	android sdk 1.5 or 1.6
