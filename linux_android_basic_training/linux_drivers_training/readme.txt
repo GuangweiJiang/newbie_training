@@ -7,9 +7,8 @@ Training #3	Misc Drivers
 Training #4	ioctl
 Training #5	Concurrency and Race Conditions
 Training #6	Time, Delays
-Training #7	Building Kernel image for goldfish(emulator)
-Training #8	Building Android application
-Training #9	Use NDK to build JNI shared library
+Training #7	Building Kernel image for goldfish(or real android device)
+Training #8	Building a driver to dump GPIO status
 
 Notes:
 For "Course#01 Linux Developing introduce",
