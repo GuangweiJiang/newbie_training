@@ -1,3 +1,9 @@
+/*
+ * * file name: write_t.c
+ * * purpose: a test program of module ex_02
+ * * creator: Allan xing
+ * * create time: 2012-09-17
+ * */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
