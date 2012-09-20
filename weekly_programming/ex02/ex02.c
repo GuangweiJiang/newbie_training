@@ -41,6 +41,6 @@ int main(void)
 		printf("It has %d '1'\n",Bget(m));
 	}else{
 		printf("input error!\n");
-	return 0;
 	}	
+	return 0;
 }
