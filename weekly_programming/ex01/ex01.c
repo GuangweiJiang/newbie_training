@@ -21,7 +21,7 @@ int comp(const void *a,const void *b)
 }
 
 //print data
-void outsort(int *p)
+void printdata(int *p)
 {
 	int i;
 	for(i=0;i<N;i++)
@@ -38,13 +38,15 @@ int main(void)
 	begin=clock();
 	int i,j;
 	int *num;
-        num=(int*)malloc(N*sizeof(int));//申请内存空间
+    num=(int*)malloc(N*sizeof(int));//申请内存空间
 	if(num==0)return;
 	srand((unsigned)time(NULL));
 	for(i=0;i<N;i++)
+	{
 		num[i]=rand()%45600;//生成随机数
+	}
 	qsort(num,N,sizeof(int),comp);
-	outsort(num);
+	printdata(num);
 	free(num);
 	end =clock();
 	cost=(double)(end-begin)/CLOCKS_PER_SEC;//计算时间
