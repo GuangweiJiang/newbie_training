@@ -3,6 +3,7 @@
  * purpose: Input a intger,then get how many "1" of it's binary form
  * creator: Allan xing
  * create time: 2012-09-17
+ * modify time: 2012-09-20
  */
 
 #include <stdio.h>
