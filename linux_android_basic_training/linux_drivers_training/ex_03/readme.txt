@@ -18,4 +18,4 @@ Purpose:
 2. Dig into the "misc_register" in kernel source, and learn how it works.
 
 Refer books:
-	"Essential Linux Device Drivers", chapter 5 - "Character Drivers" (p160-166, "Misc Drivers")
+	"Essential Linux Device Drivers", chapter 5 - "Character Drivers" (p110-115, "Misc Drivers")
