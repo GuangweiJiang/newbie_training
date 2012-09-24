@@ -5,12 +5,14 @@
  * create time: 2012-09-17
  * modify time: 2012-09-20 consummate function
  * modify time: 2012-09-21 consummate error information
+ * modify time: 2012-09-24 Improve function further
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#define MAX 10
 
 int Bget1(int n)
 {
@@ -62,6 +64,8 @@ int IsNum(char *str)
 int main(void)
 {	
 	char str[100];
+	int count=0;
+	/*
 	while(str!=NULL)
 	{
 		printf("input a intger: ");
@@ -75,8 +79,27 @@ int main(void)
 		else
 		{
 			printf("Input error,try again!\n");
+			if(count>MAX)
+			{
+				printf("Sorry,illegal input exceeds the maximum limit,bye!\n");
+				exit(0);
+			}
 			continue;
 		}
+		count++;
 	}
+	*/
+	do{
+		count++;
+		printf("input a intger: ");
+		scanf("%s[^\n]",str);
+		if(count>MAX)
+		{
+			printf("Sorry,illegal input exceeds the maximum limit,bye!\n");
+			exit(0);
+		}
+	}while(!IsNum(str));
+	int m=atoi(str);
+	printf("It has %d '1'\n",Bget1(m));
 	return 0;
 }
