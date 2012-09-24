@@ -91,13 +91,17 @@ int main(void)
 	*/
 	do{
 		count++;
-		printf("input a intger: ");
-		scanf("%s[^\n]",str);
+		if(count > 1 && count < MAX)
+		{
+			printf("Your input is not a intger! Try again:\n");
+		}
 		if(count>MAX)
 		{
 			printf("Sorry,illegal input exceeds the maximum limit,bye!\n");
 			exit(0);
 		}
+		printf("input a intger: ");
+		scanf("%s[^\n]",str);
 	}while(!IsNum(str));
 	int m=atoi(str);
 	printf("It has %d '1'\n",Bget1(m));
