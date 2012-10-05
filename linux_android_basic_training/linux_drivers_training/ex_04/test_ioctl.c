@@ -20,14 +20,16 @@
 
 int main(int argc,char** argv)
 {
-        int fd;
-        char buf[20];
-	if(argc<3){
+	int fd;
+	char buf[20];
+	if(argc<3)
+	{
 		fprintf(stderr,"Usage:%s\n",strerror(errno));
 		exit(0);
 	}
 	
-	if((fd=open(argv[1],O_RDWR | O_NONBLOCK | O_ASYNC))<0){
+	if((fd=open(argv[1],O_RDWR | O_NONBLOCK | O_ASYNC))<0)
+	{
 		fprintf(stderr,"open file error:%s\n",strerror(errno));
 		exit(0);
 	}
@@ -36,7 +38,6 @@ int main(int argc,char** argv)
 
 	ioctl(fd,CHARDEV_OFFSET,-10);
 
-	
 	memset(buf,0,sizeof(buf));
 	read(fd,buf,strlen(argv[2]));
 	printf("read: %s\n",buf);
