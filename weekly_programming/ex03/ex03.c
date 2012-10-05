@@ -3,6 +3,7 @@
  * Description: use linklist to realize employees basic information management system
  * creator: Allan xing
  * create time: 2012-09-25
+ * modify history: 2012-10-05 Code optimization
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +28,7 @@ struct staff* create()
 	p1=(struct staff*)malloc(sizeof(struct staff));
 	if(p1==NULL)
 	{
-		printf("create error! resart again!\n");
+		printf("create error! restart again!\n");
 		return NULL;
 	}
 	else
@@ -63,8 +64,8 @@ struct staff* create()
 	}
 	else
 	{
-		p1->next=head;
-		head=p1;
+		head->next = p1;
+		p1->next = NULL;
 	}
 	return head;
 }
