@@ -3,6 +3,7 @@
  * purpose: Create a module of char dirver to test ioctl function
  * creator: Allan xing
  * create time: 2012-09-27
+ * modify history: 2012-10-05 Code completion
  */
 
 #include <linux/init.h>
@@ -14,6 +15,7 @@
 #include <linux/types.h>
 #include <linux/memory.h>
 #include <linux/slab.h>
+#include <linux/device.h>
 #include <asm/system.h>
 #include <asm/uaccess.h>
 
@@ -26,11 +28,11 @@
 #define SEEK_CUR 1
 #define SEEK_END 2
 
-#define CHARDEV_MAGIC 'k'
-#define CHARDEV_MAX_NR 2
+#define IOCTL_CHARDEV_MAGIC 'k'
+#define IOCTL_CHARDEV_MAX_NR 2
 
-#define CHARDEV_CLEAR _IO(CHARDEV_MAGIC,1)
-#define CHARDEV_OFFSET _IO(CHARDEV_MAGIC,2)
+#define IOCTL_CHARDEV_CLEAR _IO(IOCTL_CHARDEV_MAGIC,1)
+#define IOCTL_CHARDEV_OFFSET _IO(IOCTL_CHARDEV_MAGIC,2)
 
 //make device structure
 struct global_dev
@@ -40,6 +42,7 @@ struct global_dev
 };
 struct global_dev gdev;
 struct global_dev *global_devp;
+struct class *driver_class;
 dev_t devno;
 
 
@@ -150,18 +153,18 @@ static long char_ioctl(struct file *file,unsigned int cmd,unsigned long arg)
 	int ret = 0;
 	struct global_dev *dev = file->private_data;
 
-	if(_IOC_TYPE(cmd) != CHARDEV_MAGIC)return -EINVAL;
-	if(_IOC_NR(cmd) > CHARDEV_MAX_NR)return -EINVAL;
+	if(_IOC_TYPE(cmd) != IOCTL_CHARDEV_MAGIC)return -EINVAL;
+	if(_IOC_NR(cmd) > IOCTL_CHARDEV_MAX_NR)return -EINVAL;
 
 	switch(cmd)
 	{
-	case CHARDEV_CLEAR:
+	case IOCTL_CHARDEV_CLEAR:
 		memset(dev->memory,0,MEM_SIZE);
 		file->f_pos = 0;
 		printk("clear the memory!\n");
 		ret = 0;
 		break;
-	case CHARDEV_OFFSET:
+	case IOCTL_CHARDEV_OFFSET:
 		file->f_pos += (int)arg;
 		ret = file->f_pos;
 		printk("change offset!\n");
@@ -197,7 +200,6 @@ static void global_setup_cdev(struct global_dev dev,int index)
 		printk("add  error!\n");
 		goto err1;
 	}
-	printk("Hello kernel!\n");
 err1:
 	unregister_chrdev_region(devno,1);//if registration failed,unregister it
 }
@@ -219,7 +221,6 @@ static int __init char_init(void)
 		printk("register error!\n");
 		goto err0;
 	}
-	printk("major=%d,minor=%d\n",MAJOR(devno),MINOR(devno));
 	global_devp = kmalloc(sizeof(struct global_dev),GFP_KERNEL);
 	if(!global_devp)
 	{
@@ -227,6 +228,12 @@ static int __init char_init(void)
 		goto err0;
 	}
 	global_setup_cdev(gdev,0);
+
+	//Creating a device node
+	driver_class = class_create(THIS_MODULE,DEV_NAME);
+	device_create(driver_class,NULL,devno,NULL,DEV_NAME);
+	printk("major=%d,minor=%d\n",MAJOR(devno),MINOR(devno));
+	printk("Hello kernel!\n");
 	return 0;
 err0:
 	unregister_chrdev_region(devno,1);//if registration failed,unregister it
