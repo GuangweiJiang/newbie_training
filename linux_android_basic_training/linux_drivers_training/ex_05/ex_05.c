@@ -78,10 +78,11 @@ static ssize_t char_read(struct file *file,char __user* buffer,size_t size,loff_
 		count = MEM_SIZE - p;
 	}
 
-	if(down_interruptible(&dev->sem))//if(read_lock(&dev->rwlock))
+	if(down_interruptible(&dev->sem))
 	{
 		return -ERESTARTSYS;
 	}
+	//read_lock(&dev->rwlock);
 	nread = copy_to_user(buffer,dev->memory + p, count);
 	if(nread>0)
 	{
@@ -92,10 +93,9 @@ static ssize_t char_read(struct file *file,char __user* buffer,size_t size,loff_
 		*offset += count;
 		ret = count;
 	}
-	printk("Read %u bytes from %lu\n",count,p);
-
 	up(&dev->sem);
 	//read_unlock(&dev->rwlock);
+	printk("Read %u bytes from %lu\n",count,p);
 	return ret;
 }
 static ssize_t char_write(struct file *file,const char __user* buffer,size_t size,loff_t *offset)
@@ -113,10 +113,11 @@ static ssize_t char_write(struct file *file,const char __user* buffer,size_t siz
 	{
 		count = MEM_SIZE - p;
 	}
-	if(down_interruptible(&dev->sem))//if(write_lock(&dev->rwlock))
+	if(down_interruptible(&dev->sem))
 	{
 		return -ERESTARTSYS;
 	}
+	//write_lock(&dev->rwlock);
 	nwrite = copy_from_user(dev->memory + p,buffer, count);
 	if(nwrite>0)
 	{
@@ -211,7 +212,7 @@ static const struct file_operations test_fops = {
 	.read		= char_read,
 	.write		= char_write,
 	.llseek		= char_llseek,
-	.unlocked_ioctl		=char_ioctl,//?
+	.unlocked_ioctl		=char_ioctl,
 	.owner		= THIS_MODULE
 };
 
@@ -257,8 +258,10 @@ static int __init char_init(void)
 	}
 	global_setup_cdev(gdev,0);
 	//init semaphore
-	//init_MUTEX(&global_devp->sem);
+	//init_MUTEX(&global_devp->sem);It had not been used sice 2.6.26
 	sema_init(&global_devp->sem,1);
+	//init rwlock
+	//rwlock_init(global_devp->rwlock);
 
 	//Creating a device node
 	driver_class = class_create(THIS_MODULE,DEV_NAME);
