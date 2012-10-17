@@ -1,0 +1,57 @@
+Insert sort test report:
+  (1)Before algorithm optimization the program will cost much more time,except 
+     increasing data and equivalent data.
+  (2)Before algorithm optimization compiler optimization options will improve 
+     the efficiency of the implementation,but it is not the more the better.
+  (3)After algorithm optimization compiler optimization options will play a 
+     greater role in the program.
+
+Test data N=100000
+
+1) Before optimization (random data)
+   cost time = 24.80 seconds
+   gcc -O :cost time = 3.40 seconds
+   gcc -O2:cost time = 5.30 seconds
+   gcc -O3:cost time = 5.30 seconds
+
+   After optimization  (random data)
+   cost time = 14.90 seconds
+   gcc -O :cost time = 2.60 seconds
+   gcc -O2:cost time = 2.40 seconds
+   gcc -O3:cost time = 2.20 seconds
+
+2) Before optimization (decreasing data)
+   cost time = 49.8 seconds
+   gcc -O :cost time = 6.80 seconds
+   gcc -O2:cost time = 10.80 seconds
+   gcc -O3:cost time = 10.80 seconds
+
+   After optimization  (decreasing data)
+   cost time = 29.8 seconds
+   gcc -O :cost time = 5.20 seconds
+   gcc -O2:cost time = 4.90 seconds
+   gcc -O3:cost time = 4.50 seconds
+
+3) Before optimization (increasing data)
+   cost time = 0.01 seconds
+   gcc -O :cost time = 0.01 seconds
+   gcc -O2:cost time = 0.01 seconds
+   gcc -O3:cost time = 0.01 seconds
+
+   After optimization  (increasing data)
+   cost time =(Approximately equal) 0 seconds
+   gcc -O :cost time =(Approximately equal) 0  seconds
+   gcc -O2:cost time =(Approximately equal) 0  seconds
+   gcc -O3:cost time =(Approximately equal) 0  seconds
+
+4) Before optimization (equivalent data)
+   cost time =(Approximately equal) 0   seconds
+   gcc -O :cost time =(Approximately equal) 0  seconds
+   gcc -O2:cost time =(Approximately equal) 0  seconds
+   gcc -O3:cost time =(Approximately equal) 0  seconds
+
+   After optimization  (equivalent data)
+   cost time =(Approximately equal) 0 seconds
+   gcc -O :cost time =(Approximately equal) 0  seconds
+   gcc -O2:cost time =(Approximately equal) 0  seconds
+   gcc -O3:cost time =(Approximately equal) 0  seconds
