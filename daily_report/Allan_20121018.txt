@@ -1,17 +1,17 @@
 This is Allan's daily report 20121018:
 
-  The study of Linux Driver is nearing completion,but I know there are much more
+  The study of Linux Driver is almost done,but I know there are much more
 things I have not known.I will spend my spare time to learn it in-depth because 
-I am interesting in it.Although it is difficlt for me,and there is no one can teach 
+I am interest in it.Although it is difficlt for me,and there is no one can teach 
 me every minute,I will study it by myself through books and internet.If I want,I 
 will try my best to do it.Rome wasn't built in a day.Working harder and practicing 
 more.You will be rewarded by god one day.
   In addition,the training for new employees is beginning.Altough that is not 
 important,it will affect my profit.So it is necessary to do it well.In the mean-
 time,I will learn and do some works which interest me.Recently,Liquan is responsible
-for the establishment of ftp server,I find he have met many problems on that.It 
+for the establishment of ftp server,I find he has met many problems on that.It 
 looks like a easy thing,but if you have not made or understood it,you will meet
 many questions.I try to do it in my spare time,it is not smooth at the beginning
 too.I fail many times but I don't give up,on the contrary,I try it trough many
-methods.Finally,I succeed.Even though it is prefect,it have had the basic 
-functionalities are required.
+methods.Finally,I succeed.Even though it is not prefect,it has had the basic 
+function are required.
