@@ -1,27 +1,20 @@
 Linux driver training material - exercise 08
-by guangwei@Jan21'10
+by guangwei@Sep18'12
 
 Targets:
-	Build your first Andriod application (use SDK).
+1. Build a driver and dump all of the GPIO status;
 
 Test Enviroment:
-	android sdk 1.5 or 1.6
+Test on real android device(Bohai, t-lite or others);
 
 Time Required:
-	2 days.
+5 days.
 
 Purpose:
-	1. Get eclipse 3.5 from server (linux version is recommanded, if you are a kernel/driver developer)
-		//10.42.92.17/sw_rd$/Projects/Android/eclipse/eclipse3.5
-	2. Refer the doc "Installing and Updating ADT.doc" to configure your eclipse development enviroment for android.
-	3. Follow "hello-world" tutorials to build your first android application.
-		http://developer.android.com/resources/tutorials/hello-world.html
-	4. Learn how to use the "views", you can follow below link to develop/debug,
-		http://developer.android.com/resources/tutorials/views/index.html
- 
+1. Read below gpio.txt and learn what's GPIO and how to operate.
+Documentation/gpio.txt
+2. Learn how to read HW schematic;
+3. Learn how to read SOC spec;
 
-Refer books/websites:
-	http://developer.android.com/resources/tutorials/hello-world.html
-	http://developer.android.com/resources/tutorials/views/index.html
-	"Google Android SDK 开发范例大全"
+
 
