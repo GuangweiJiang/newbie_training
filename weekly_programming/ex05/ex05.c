@@ -3,6 +3,7 @@
  * purpose: generates k random numbers
  * creator: Allan xing
  * create time: 2012-10-23
+ * modify history: Change global variables and add a new method
  */
 
 #include <stdio.h>
@@ -13,7 +14,6 @@
 
 #define N 10000000
 #define K 5000000
-FILE *fd;
 
 void swap(int *a, int *b)
 {
@@ -25,7 +25,7 @@ void swap(int *a, int *b)
 	}
 }
 
-void generateDiffRand(int *a, int k, int n)
+void generateDiffRand1(int *a, int k, int n)
 {
 	int i;
 	time_t t;
@@ -41,7 +41,33 @@ void generateDiffRand(int *a, int k, int n)
 	}
 }
 
-void print_outdata(int *a, int m)
+//first:generate a array contain subscript second: extract randomly from it
+void generateDiffRand2(int *a,int n)
+{
+	int *b = (int *)malloc(sizeof(int)*n);
+	static int flag = 0;
+	int i,index;
+	for(i = 0;i < n; i++)
+	{
+		b[i] = i + 1;
+	}
+	if(!flag)
+	{
+		srand((int)time(0));
+		flag = 1;
+	}
+	for(i = 0; i < n;i++)
+	{
+		index = rand() % n;
+		if(b[index] != 0)
+		{
+			a[i] = b[index] - 1;
+			b[index] = 0;
+		}
+	}
+}
+
+void print_outdata(FILE *fd,int *a, int m)
 {
 	int i;
 	for(i = 0; i < m; i++)
@@ -52,8 +78,15 @@ void print_outdata(int *a, int m)
 
 int main(void)
 {
+	FILE *fd;
+	FILE *fd1;
 	int *a;
 	if((fd = fopen("./file.txt","w+")) == NULL)
+	{
+		printf("open error!\n");
+		exit(0);
+	}
+	if((fd1 = fopen("./file1.txt","w+")) == NULL)
 	{
 		printf("open error!\n");
 		exit(0);
@@ -62,8 +95,11 @@ int main(void)
 	if(a == 0)return 0;
 	memset(a,0,sizeof(a));
 
-	generateDiffRand(a,K,N);
-	print_outdata(a,K);
+	generateDiffRand1(a,K,N);
+	print_outdata(fd,a,K);
+
+	generateDiffRand2(a,N);
+	print_outdata(fd1,a,K);
 	return 0;
 }
 
