@@ -1,7 +1,7 @@
 #file name: Makefile
-#description: a file to make the file of atomic.c
+#description: a file to make the file of ex_08.c
 #creator: Allan xing
-#create time: 2012-09-28
+#create time: 2012-10-25
 
 obj-m +=ex_08.o
 KVER = $(shell uname -r)
