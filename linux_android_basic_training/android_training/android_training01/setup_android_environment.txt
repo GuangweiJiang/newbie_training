@@ -1,0 +1,40 @@
+1.安装java: 
+        通过apt-get install sun-java6-jdk自动安装java6
+2.配置java环境：
+        在家目录下编辑.bashrc加入java环境参数，我的安装在/opt，配置如下
+        export JAVA_HOME=/opt/jdk1.6.0_22
+        export PATH=$JAVA_HOME/bin:$PATH
+        export JRE_HOME=$JAVA_HOME/jre
+        export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+然后在终端输入java -version就会看到成功信息
+java version "1.6.0_22"
+Java(TM) SE Runtime Environment (build 1.6.0_22-b04)
+Java HotSpot(TM) Server VM (build 17.1-b03, mixed mode)
+
+3.下载配置开发环境：
+       (1)eclipse:http://www.eclipse.org/downloads/
+       这里选择了 linux 下的Eclipse for RCP and RAP Developers
+       (2)SDK包：http://developer.android.com/
+       android-sdk_r06-linux_86.tgz
+       (3)把eclipse和SDK直接解压缩，配置下环境变量PATH，如我把 eclipse 拷贝到 /opt/ 目录下 ,
+       把 sdk 放到 ~/software/android_sdk ，就在 ~/.bashrc 文件下分别增 加以下两句：
+       PATH=/opt/eclipse:$PATH
+       PATH=~/software/android_sdk/tools:$PATH
+       然后source一下~/.bashrc
+       
+配置eclipse:
+        运行 eclipse, 在菜单 help->install new software 中增加以下地址以安装
+        ADT:https://dl-ssl.google.com/android/eclipse/
+确认后，选择DDMS和ADT 按提示进一步安装就可以了。
+ADK安装完成后，还需要在 eclipse 里配置SDK。在配置SDK前，可以选择先升级SDK 。
+Android SDK 在 2.1 之前，是可以选择在原有的版本上直接增加多个版本的SDK。如最新的
+android-sdk_r06-linux_86.tgz, 解压后其实还不是完整的ＳＤＫ，需要在线升级一下。
+
+解压文件后，直入 tools 目录，运行 android 文件即可：
+把想安装的都选择上就可以了，所有的 sdk 版本都是可以共存的，所以按自已的需要进行安装。
+点install Selected 后，就等待下载完成。所有版本的的 sdk 都会下载到当前sdk 的 platforms 目录下去。
+安装完ＡＤＴ后，在eclipse中点击Window->Preferences，将可以看到关于Android的配置，
+设置好SDK的路径后装可以看到已经下载到本地的SDK。
+
+
+
