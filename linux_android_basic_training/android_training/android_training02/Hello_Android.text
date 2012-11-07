@@ -1,0 +1,56 @@
+                    建立第一个android应用程序同时进行debug测试
+一.建立工程
+1.运行Eclipse
+2.在菜单栏上选择，file->new->project，会弹出new project(新建项目)的对话窗口。
+  点击Android 文件夹下的Android Application project,会打开 New Android Application
+  对话窗口。
+3.我们选择creat project in workspace 从而选择储存新建项目的路径。
+4.填写项目的有关属性：
+Project Name:这个项目所在文件夹的名字。
+Application Name:应用程序显示在屏幕上的标题。
+Package Name:包名称，Package Name 的设置，必须至少由两部分组成例“demo.mydemo”
+Build SDK :选择Android 版本号。
+5.应用程序建立完成！
+
+二.dubug测试 
+1.在src下找到源文件(Main.java),代码如下：
+package com.xing.helloandroid;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class Main extends Activity {
+        public static final String TAG = "helloandroid";
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d(TAG,"debug");
+        Log.v(TAG,"verbose");
+        Log.e(TAG,"error");
+        Log.w(TAG,"warn");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+}
+2.添加断点，（双击代码行左端添加断点）。断点的作用是程序单布运行时跳过断点，以便更好的定位到bug。
+3.添加log（打印信息），用来定位bug.
+4.执行Run->Debug->Android Application调试，程序启动后在模拟器上出现Debug Test 用户界面，
+程序会在断电处停止，Eclips 自动切换到Debug 布局。
+        Debug: 用来显示程序执行过程的调用栈。在其标签的工具栏中，有一些继续，暂停，单步按钮。
+        variables和break points: variables可显示当前代码作用域的所有变量，break points列出程序中所有的断点。
+        Editor:Debug 布局中代码高亮度显示。
+        outline:显示当前项目的结构图。
+        console/tasks/projects:显示调试信息。
+        logcat:SDK中一个通用的日志工具，在程序运行过程中可通过logcat打印状态信息和错误信息等。
+        logcat试图中包含如下列：
+        Time:用于显示消息产生的时间。
+        priority:显示消息级别。
+        pid:显示消息进程ID。
+        tag:消息来源简单描述。
+        message:消息详细内容。
