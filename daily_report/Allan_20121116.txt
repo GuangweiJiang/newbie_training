@@ -1,0 +1,13 @@
+This is Allan's daily report 20121116:
+
+  After a period of study on android,I have a further understanding of it.
+Learning by examples I have known the basic widget of android and the procedure
+of android development. Now I have already finished the music player,though it is
+just a simple example,I still have met many problems. In order to solve them,I 
+found solutions on the Internet and asked for help from colleagues. Although the
+music player can operate normally,it still has many aspects to improve. 
+   I find it is interesting to make a application,when it install in my cellphone
+and work normally,I will have great sense of achievement. Tomorrow is weekend,
+have a rest to work better next step.
+
+
