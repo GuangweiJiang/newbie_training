@@ -6,8 +6,8 @@ of android development. Now I have already finished the music player,though it i
 just a simple example,I still have met many problems. In order to solve them,I 
 found solutions on the Internet and asked for help from colleagues. Although the
 music player can operate normally,it still has many aspects to improve. 
-   I find it is interesting to make a application,when it install in my cellphone
-and work normally,I will have great sense of achievement. Tomorrow is weekend,
-have a rest to work better next step.
+   I found it was interesting to make a application,when it was installed in my 
+cellphone and worked normally,I would have great sense of achievement. Tomorrow 
+is weekend,have a rest to work better next step.
 
 
