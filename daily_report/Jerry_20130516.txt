@@ -1,0 +1,4 @@
+Today I commence my newbie-training.I have completed two plans.
+First of all,I wtite the code about ex01 in the weekly-programming.The program is aimed at Sequencing huge numbers from minimun to maximum.My method is bubble sort.Then I do some research on the time and space complexity.The times of cycles is N*N/2(N=10e7).So,the time complexity is O(N^2).Meanwhile,the space complexity is about 40MB.
+Secondly,I read some details in a book of linux.The details is about file attributes.If I want to know the file attributes,I will use the order "ls".Then I see some file name.If I use the order "ls -al",I will see more files and their attributes.
+Next day I want to master more orders about linux.
