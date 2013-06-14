@@ -1,0 +1,11 @@
+Today my main work is familiar with shell. Also,I keep learning other linux commands.
+Firstly,I read a book about bash files like /etc/profile,/etc/bashrc,
+$HOME/bash_profile and so on. The file that is called $HOME/bash_profile is
+ personal setting value. The others are system setting value.
+Secondly,I learn an important command which is called export. Its function is
+ that make a transformation from custom variables to environment variables.It is very important to set the environment variables in shell.
+Thirdly,I review the linux file virtue and permission. We change the permission
+ with the command which is called chmod. Meanwhile the command chown is used
+ to change the owner of file .
+Next week ,I will commit to the training of linux programing. 
+
