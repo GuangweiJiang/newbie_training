@@ -1,0 +1,3 @@
+I begin with the training of linux programming today.
+There are two main contents to learn. First of all,I need to grasp the use of gcc that is a compiler in the linux. We can use the commands gcc -c and gcc -o to get the objective file and the executable file.At last we will get a binary file .Running the binary file will get the results what we want,if there is no error.Also the command -Wall can help us to get more warning information in the compiler.
+The other content is the use of makefile. The command make can cause the compilation process easily.Yet I have not been familiar with the usage of makefile. So next stage I will keep learning this. 
