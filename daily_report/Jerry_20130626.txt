@@ -1,0 +1,10 @@
+I read a completely char device driver and learn the dedugging techniques.
+When I firstly see the device driver ,I feel very complicated. After reading 
+that at the first time ,I just find the char device driver is consist of some 
+specific functions like the initialization function , the clear function,the 
+allocation function and so on. Even though they have a little hard to understand,
+I still do my best to learn that.
+The debugging technique is another knowledge that I read. I learn some methods 
+to debug. First of all, debugging by printing is s useful .Secondly, watching 
+is also a good way to debug. Thirdly, we can use a debugger to solve the 
+problem. Of course, they have different usages when we debug.
