@@ -1,6 +1,6 @@
 KVERS = $(shell uname -r)
 # Kernel modules
-obj-m +=linux.o
+obj-m +=linux2.o
 
 # Specify flags for the module compilation.
 #EXTER_CFLAGS=-g -o0
