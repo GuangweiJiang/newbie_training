@@ -1,0 +1,10 @@
+Today is monday ,the beginning of the working day in this week. To have a good 
+start I do the following jobs.
+Above all, I make a linux_drivers_training schedule to make sure my tasks 
+complete efficiently.
+The next job is the second exercise of linux_drivers_training. I learn how to 
+make a node and destroy a node and so on. The functions are  class_create, 
+device_create, class_destroy and device_destroy.
+At last ,I accomplish the second weekly program. It is about adding up the 
+quantities of 1 about a number in binary. The method which I used is bit 
+manipulation.
