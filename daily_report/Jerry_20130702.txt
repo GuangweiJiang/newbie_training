@@ -1,0 +1,9 @@
+Today I keep doing the linux_drivers_training. Meanwhile I read some 
+information about the misc_register.
+On the one hand,I complete the NO.2 exercise of the linux_drivers_training. 
+There is no error in the programming with the help of my colleagues. Tomorrow 
+I will write a programming to test the correctness of  the exercise.
+On the other hand, I look for some information about the misc_register to 
+prepare the third exercise of the linux_drivers_training online.
+At last I take part in the regular meeting that talk about the progress about 
+all projects.
