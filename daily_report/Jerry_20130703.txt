@@ -1,0 +1,8 @@
+I write a test program in the user space to check out the correctness of the 
+device driver today.
+In the test program I give two numbers (99,1111).After compile the program 
+and run it, the device driver will show me the words”the first value is 99.”,
+”the second value is 1111.”.That means I make it .
+At last , I need to check out the format of the programs and write some 
+descriptions about the device driver. Thank to the help from my colleagues.
+Tomorrow I will go on doing the third exercise.
