@@ -1,0 +1,9 @@
+Today I plan to complete the third exercise of linux driver training.
+First of I need to check out the errors in the program. Owing to the reason
+which I am not familiar with the structure pointer. I make a big mistake that 
+spends a lot of time on . Secondly,because I copy some parts of the second 
+exercise in the third exercise, there is a warning about the driver. At last ,
+I find that   a  parameter which I used in the second exercise  is useless 
+in the third exercise. That makes me be more careful for the next exercise.
+This weekend I will write a test program to test the third exercise and 
+prepare to the fourth exercise.
