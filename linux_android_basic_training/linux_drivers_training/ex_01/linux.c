@@ -21,7 +21,7 @@
 //
 //
 //-----------------------------------------------------------------
-// LOAD  FUNCTIONS
+// LOAD  FUNCTIONS :The function is used to load the module.
 //-----------------------------------------------------------------
 static int hello_init(void)
 {
@@ -31,7 +31,7 @@ static int hello_init(void)
 //
 //
 //-----------------------------------------------------------------
-// UNINSTALL FUNCTIONS
+// UNINSTALL FUNCTIONS :The function is used to uninstall the module.
 //-----------------------------------------------------------------
 static void hello_exit(void)
 {
@@ -45,12 +45,3 @@ MODULE_AUTHOR("Jerry Liu");
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_DESCRIPTION("A simple Hello World Module");
 MODULE_ALIAS("a simplest module");
-//
-//
-//----------------------------------------------------------------------------
-// Function:
-// 			1.static int hello_init(void)
-//			2.static void hello_exit(void)
-// Description:
-//			1.The function is used to load the module.
-//			2.The function is used to uninstall the module.
