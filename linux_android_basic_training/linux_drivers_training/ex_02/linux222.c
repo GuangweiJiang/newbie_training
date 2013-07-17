@@ -72,7 +72,7 @@ struct device_cdev *device_cdevp; /*设备结构体指针*/
 //
 //
 //-----------------------------------------------------------------
-// OPEN FUNCTIONS
+// OPEN FUNCTIONS :The function is provided for a driver to do any initialization in preparation.
 //-----------------------------------------------------------------
 int device_cdev_open( struct inode *node, struct file *filp )
 {
@@ -83,7 +83,7 @@ int device_cdev_open( struct inode *node, struct file *filp )
 //
 //
 //-----------------------------------------------------------------
-// RELEASE FUNCTIONS
+// RELEASE FUNCTIONS :The function is the reverse of open.
 //-----------------------------------------------------------------
 int device_cdev_release(struct inode *inode, struct file *filp )
 {
@@ -92,7 +92,7 @@ int device_cdev_release(struct inode *inode, struct file *filp )
 //
 //
 //-----------------------------------------------------------------
-// READ FUNCTIONS
+// READ FUNCTIONS :The function is used to transfer data between the kernel address space and the user address space.
 //-----------------------------------------------------------------
 static ssize_t device_cdev_read( struct file *filp, char __user *buf, size_t size, loff_t *offset )
 {
@@ -122,7 +122,7 @@ static ssize_t device_cdev_read( struct file *filp, char __user *buf, size_t siz
 //
 //
 //-----------------------------------------------------------------
-// WRITE FUNCTIONS
+// WRITE FUNCTIONS :The function is used to transfer data between the kernel address space and the user address space.
 //-----------------------------------------------------------------
 static ssize_t device_cdev_write( struct file *filp, const char __user *buf, size_t size, loff_t *offset )
 {
@@ -151,9 +151,8 @@ static ssize_t device_cdev_write( struct file *filp, const char __user *buf, siz
 //
 //
 //-----------------------------------------------------------------
-// ioctl CONTROL FUNCTIONS
+// ioctl CONTROL FUNCTIONS :The function is used to control the devices.
 //-----------------------------------------------------------------
-/*long (*unlocked_ioctl) (struct file *, unsigned int, unsigned long);*/
 
 static long  device_cdev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
 {
@@ -211,7 +210,7 @@ static int device_cdev_setup( struct device_cdev *dev, int index )
 //
 //
 //-----------------------------------------------------------------
-// LOAD FUNCTIONS
+// LOAD FUNCTIONS :The function is used to load the modules.
 //-----------------------------------------------------------------
 static int __init device_cdev_init(void)
 {
@@ -250,7 +249,7 @@ static int __init device_cdev_init(void)
 //
 //
 //-----------------------------------------------------------------
-// UNINSTALL FUNCTIONS
+// UNINSTALL FUNCTIONS :The function is used to uninstall the modules.
 //-----------------------------------------------------------------
 static struct class    *device_class;
 
@@ -270,25 +269,3 @@ MODULE_LICENSE("Dual BSD/GPL");
 
 module_init(device_cdev_init);
 module_exit(device_cdev_exit);
-//
-//
-//----------------------------------------------------------------------------
-// Function:
-//	    1.device_cdev_open( struct inode *node, struct file *filp )
-//          2.device_cdev_release( struct inode *inode, struct file *filp )
-//	    3.device_cdev_read( struct file *filp, char __user *buf, size_t size, loff_t *offset )		
-//          4.device_cdev_write( struct file *filp, const char __user *buf, size_t size, loff_t *offset )
-//	    5.device_cdev_ioctl(struct inode *inode, struct file *filp, unsigned int cmd, unsigned long arg)
-//	    6.device_cdev_init(void)
-//          7.device_cdev_exit(void)		
-//
-// Description:
-//	    1.The function is provided for a driver to do any initialization in preparation.
-//	    2.The function is the reverse of open.	
-//	    3.The function is used to transfer data between the kernel address space and the user address space.
-// 	    4.The function is used to transfer data between the kernel address space and the user address space.
-// 	    5.The function is used to control the devices.
-// 	    6.The function is used to load the modules.	
-//	    7.The function is used to uninstall the modules	
-//
-
