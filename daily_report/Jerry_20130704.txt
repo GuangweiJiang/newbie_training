@@ -2,7 +2,7 @@ The most important thing is learning how to write a misc device driver today.
 We all know that it needs three steps to complete the char device driver 
 initialization which included allocate the major and minor ,create the /dev 
 and /sys node  and register the device driver. The misc register takes the 
-place of the three steps. It implifiea the method to the device  driver 
+place of the three steps. It simplifies the method to the device  driver 
 initialization.
 Of course there are still many problems in the driver . Some errors are about 
 the function definition and  initialization that I am not good at .Tommorrow 

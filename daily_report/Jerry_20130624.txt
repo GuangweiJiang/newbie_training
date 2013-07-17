@@ -3,8 +3,8 @@ First of all, I begin with a simple kernel module that  contains insert function
 ,remove function,permission statement and some other information. We can use the
  command insmod to insert  and the command rmmod to remove. Their forms are
  module_init() and module_exit().
-Secondly,I need to know how to compiler the kernel module. We use the command 
+Secondly,I need to know how to compile the kernel module. We use the command 
 obj-m and the command obj-y to get that. The -m means compiling to be a module.
  The -y means compiling that into the kernel.
 Thirdly, I read some materials about file operations, especially for the
- different between the file structure and the inode structure.
+ differences between the file structure and the inode structure.

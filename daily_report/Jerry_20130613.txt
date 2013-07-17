@@ -1,10 +1,10 @@
 I have a life without linux in the last twenty days. So,my first thing is
- getting myself in the job,when I get back today.
+getting myself in the job,when I get back today.
 To tell the turth,I am not familer with the linux code. That means I spend most
- time on that  to review the important code today. Also,I learn something about
- regular expression and know the importance for the system manager. In short,the
- regular expression is a way in which people deal with the problems about
- strings. It is fundanmental for me to know the system.
+time on that  to review the important code today. Also,I learn something about
+regular expression and know the importance for the system manager. In short,the
+regular expression is a way in which people deal with the problems about
+strings. It is important for me to know the system.
 At last ,I read a chapter on shell. It is like a file to get many orders
- together. Then when we  use the file,the orders also will work. I will never
- give up learning shell,when I begin to know the linux clearly.
+together. Then when we  use the file,the orders also will work. I will never
+give up learning shell,when I begin to know the linux clearly.

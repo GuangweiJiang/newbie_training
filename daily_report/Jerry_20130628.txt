@@ -1,4 +1,4 @@
-Today I go on write the exercise2 about the linux_drivers_training.
+Today I go on writing the exercise2 about the linux_drivers_training.
 I have completed an integral device driver, but there are a lot of errors and 
 warnings with that .The driver is included five file operations (read,write,
 open,release,ioctl).Of course ,I imitate some templates. Because of those 
