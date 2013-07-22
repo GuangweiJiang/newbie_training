@@ -53,7 +53,7 @@ struct misc_cdev
 //
 //
 //-----------------------------------------------------------------
-// OPEN FUNCTIONS
+// OPEN FUNCTION:The function is provided for a driver to do any initialization in preparation.
 //-----------------------------------------------------------------
 static int misc_open(struct inode *inode, struct file *file)
 {
@@ -63,7 +63,7 @@ static int misc_open(struct inode *inode, struct file *file)
 //
 //
 //-----------------------------------------------------------------
-// RELEASE FUNCTIONS
+// RELEASE FUNCTION:The function is the reverse of open.  
 //-----------------------------------------------------------------
 int misc_release(struct inode *inode, struct file *filp )
 {
@@ -72,7 +72,7 @@ int misc_release(struct inode *inode, struct file *filp )
 //
 //
 //-----------------------------------------------------------------
-// READ FUNCTIONS
+// READ FUNCTION:The function is used to transfer data between the kernel address space and the user address space.
 //-----------------------------------------------------------------
 static ssize_t misc_read( struct file *filp, char __user *buf, size_t size, loff_t *offset )
 {
@@ -96,7 +96,7 @@ static ssize_t misc_read( struct file *filp, char __user *buf, size_t size, loff
 //
 //
 //-----------------------------------------------------------------
-// WRITE FUNCTIONS
+// WRITE FUNCTION:The function is used to transfer data between the kernel address space and the user address space.
 //-----------------------------------------------------------------
 static ssize_t misc_write( struct file *filp, const char __user *buf, size_t size, loff_t *offset )
 {
@@ -117,7 +117,7 @@ static ssize_t misc_write( struct file *filp, const char __user *buf, size_t siz
 //
 //
 //-----------------------------------------------------------------
-// LOCATE FUNCTIONS
+// LOCATE FUNCTION:The function is used to locate the current position.
 //-----------------------------------------------------------------
 static loff_t misc_llseek(struct file *filp, loff_t offset, int orig)
 {
@@ -179,7 +179,7 @@ static struct miscdevice misc_dev =
 //
 / 
 //-----------------------------------------------------------------
-// LOAD FUNCTIONS
+// LOAD FUNCTION:The function is used to load the modules.
 //-----------------------------------------------------------------
 static int __init misc_init(void)
 {
@@ -196,7 +196,7 @@ static int __init misc_init(void)
 //
 //
 //-----------------------------------------------------------------
-// UNINSTALL FUNCTIONS
+// UNINSTALL FUNCTION:The function is used to uninstall the modules.
 //-----------------------------------------------------------------
 static void __exit misc_exit(void)
 {
@@ -207,26 +207,3 @@ module_init(misc_init);
 module_exit(misc_exit);
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("Jerry Liu");
-
-//
-//
-//----------------------------------------------------------------------------
-// Function:
-//          1.misc_open( struct inode *node, struct file *filp )
-//          2.misc_release( struct inode *inode, struct file *filp )
-//          3.misc_read( struct file *filp, char __user *buf, size_t size, loff_t *offset )              
-//          4.misc_write( struct file *filp, const char __user *buf, size_t size, loff_t *offset )
-//          5.misc_llseek(struct file *filp, loff_t offset, int orig)
-//          6.misc_init(void)
-//          7.misc_exit(void)
-//
-// Description:
-//          1.The function is provided for a driver to do any initialization in preparation.
-//          2.The function is the reverse of open.      
-//          3.The function is used to transfer data between the kernel address space and the user address space.
-//          4.The function is used to transfer data between the kernel address space and the user address space.
-//          5.The function is used to locate the current position.
-//          6.The function is used to load the modules. 
-//          7.The function is used to uninstall the modules     
-//
-
