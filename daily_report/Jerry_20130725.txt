@@ -1,0 +1,9 @@
+Today I finish the NO.6 exercise of the linux driver training and begin to do
+the NO.7 exercise.
+The main problem of the NO.6 exercise is delaying operation for a specified
+amount of time.One of the methods is long delays. But sometimes a real driver
+needs to calculate very short delays in order to synchronize with the hardware.
+Then we often use the short delays.
+For the NO.7 exercise of linux driver training, I feel a little strange.It is 
+about android which I am mot familiar with.That means I meeds to take more time
+on the exercise.
