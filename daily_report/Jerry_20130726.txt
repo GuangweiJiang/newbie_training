@@ -1,0 +1,7 @@
+Today my plan is familiar with the NO.7 exercise of the linux driver training.
+First of all I need to know what is the android sdk.I should be familiar with
+the android emulator.Secondly I have to learn what is the goldfish and how to
+run it in the emulator.Thirdly I will add my kernel driver that I have written
+to the goldfish.Of course I have not known all of them well.
+From today I begin to write the time sheet on PTS.It means another daily report
+which write what I do briefly and which project I participate in.
