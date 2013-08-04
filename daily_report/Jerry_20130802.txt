@@ -1,0 +1,10 @@
+Today I begin to keep doing the GPIO exercise.
+The exercise is building a driver and dump all of the GPIO status.To tell the
+truth, I have no ideas about the GPIO which just know that it is general purpose
+Input /Output Ports.I have used the GPIO in the single chip computer,but that 
+was the usages about hardware.This time seems be different.The materials is about
+what is GPIO and how to operate.
+In the afternoon I learn the reports about the introductions of GPIO and creating
+nodes under /proc and /sys.Especially the last one I learn less about that.
+At last my colleague give me some introductions about WCIS.Next week I will learn
+the WCIS while doing the linux driver training.
