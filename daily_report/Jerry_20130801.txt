@@ -1,0 +1,7 @@
+Today I participate in new training.
+The three courses are EC Flow,New C System and writing technical reports in 
+the literature.Especially for the last one it is used to know the logic of
+the problems.The report will express the problems and countermeasures
+competely.
+Tomorrow I will begin to do the NO. 8 exercise of the linux driver training.
+
