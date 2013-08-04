@@ -1,0 +1,8 @@
+Today I am originally intended to do the NO.7 exercise of the linux driver 
+traning,but there are some accidents about my computer.
+First of all,I build kernel image of a real device. When I make ready to 
+run it in the real android device,the computer can not reboot.It makes me 
+lost some materials in the computer.Then my colleague Albert help me to 
+reinstall the system which is the the latest version of linux system.Unluckly
+the version is too high to get work.
+Tomorrow I will go on reinstall the system with the help of Albert.
