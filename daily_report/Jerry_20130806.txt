@@ -1,0 +1,10 @@
+Today I begin to learn the WCIS ceremonially,
+First of all, I read the SOP about the WCIS and learn to download the hudson 
+resource online.At first I download the latest version hudson 3.0.But there 
+are a lot of differences compare to the SOP.Many configurations can not be 
+found.So I use the version 2.2.1.The hudson have two sides I need to learn.
+One is the administartor side. It needs me to set up hudson, configure 
+some options,install the plug-ins and reply messages to the users.The other
+is user side. I have to know the usage of hudson,for example,how to apple for
+a node on hudson through Email.
+At last there is a problem of connection between administartor and user.
