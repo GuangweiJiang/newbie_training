@@ -1,0 +1,10 @@
+Today I have to learn the five steps about adding script.
+First of all ,it is about building image.I copy the first shell commandsfrom
+the hudson after contacting the server and user.Then I change the file mode
+which have the first shell commands to make the file to be a executable file.
+After that I use the command ./ to execute.Then The mango machine that contacts
+the computer at first begin to work. The second step is WCIS test.Also,I copy 
+the second shell commands from the hudson. The method is same as building image.
+But the WCIS test will result in a report about the test. That is the most 
+important for the test. I need to make sure write the right file path to save
+the report in the configuration.The other test is similar to the WCIS test.
