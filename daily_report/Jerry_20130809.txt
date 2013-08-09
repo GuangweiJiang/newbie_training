@@ -1,0 +1,8 @@
+Yesterday I learn the five steps about adding script.But I do not know what
+the shell commands are talking about.That means I need to be familiar with the
+shell script.Today I mainly learn how to write the shell script.I borrow a 
+shell book from my colleague Zhou Zhou.The shell script deals with the files
+and directories more simpiliy than other programming languages.Meanwhile I
+keep doing the exercise of the five steps.
+At last I have a test about the new employee training online.Luckly I pass 
+at the first attempt.
