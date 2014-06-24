@@ -1,20 +1,20 @@
 
 #hello_makefile
 
-obj-m :=hello.o     
+obj-m :=hello.o          
 KVER=$(shell uname -r)
-KERNELDIR=/usr/src/linux-headers-${KVER}
+KERNELDIR=/usr/src/linux-headers-${KVER}  #set path
 PWD=$(shell pwd)
 
 all:
 
-	make -C $(KERNELDIR) M=$(PWD) modules
+	make -C $(KERNELDIR) M=$(PWD) modules  #make under kernel
 
 	
 
 .PHONY :clean
 
-clean:
+clean:                          
 
-	rm -rf *.o *ko
+	rm -rf *.o *.ko            # remove *.o or *.ko
 
