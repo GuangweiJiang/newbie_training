@@ -16,8 +16,8 @@ do
 done
 
 #configure the vim
-read -p "Did you have configured your vim, yes or not (y/n)?" select
-if [ $select != "y" ]
+read -p "Do you want to initialize your vim, yes or not (y/n)?" select
+if [ "$select" = "y" ]
 then
 	echo "set nu" > ~/.vimrc
 	echo "set autoindent" >> ~/.vimrc
@@ -27,7 +27,7 @@ else
 fi
 
 read -p "Is your computer uesed for multimedia, yes or no (y/n)?:" select
-if [ $select = "y" ]
+if [ "$select" = "y" ]
 then
 	echo "This will take you a long time to download."
 	sudo apt-get install ubuntu-restricted-extras
