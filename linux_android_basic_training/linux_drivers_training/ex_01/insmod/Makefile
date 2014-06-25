@@ -9,5 +9,5 @@ all:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD)
 
 clean:
-	rm -rf *.cmd *.o *.mod.c *.ko .tmp_version module* Module*
+	rm -rf .*.cmd *.o *.mod.c *.ko .tmp_versions module* Module*
 endif
