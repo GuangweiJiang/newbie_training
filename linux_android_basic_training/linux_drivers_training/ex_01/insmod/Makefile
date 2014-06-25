@@ -1,8 +1,8 @@
 ifneq ($(KERNELRELEASE),)
-obj-m += hello_kernel.o
+	obj-m += hello_kernel.o
 else
-KVERSION =$(shell uname -r)
-KERNELDIR =/usr/src/linux-headers-$(KVERSION)
+	KVERSION=$(shell uname -r)
+	KERNELDIR=/usr/src/linux-headers-$(KVERSION)
 
 all:
 	PWD=$(shell pwd)

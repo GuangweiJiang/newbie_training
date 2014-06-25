@@ -1,20 +1,47 @@
 /*
- *	write a simple kernel module, make it, and insert/remove from system.
+ * Filename:
+ *      hello_kernel.c
+ *
+ * Copyright (C) 2014 Wistron
+ * All rights reserved.
+ *
+ * Description:
+ *      This file is a kernel module.
+ *
+ * Author/Created Date:
+ *      Guangwei Jiang, Jun25'14
+ *
+ * Modification History:
+ * 
+ * Note:
+ *
  */
+
+/* Include Files */
 #include <linux/init.h>
 #include <linux/module.h>
 
-static int __init hello_kernel_init(void)
+/* MACROS */
+/* DEFINES */
+/* CONSTANTS AND VARIABLES */
+/* INTERNAL FUNCTIONS */
+/* EXTERNAL FUNCTIONS */
+
+/* IMPLEMENTATION */
+/* the entry function */
+static int __init hellokernel_init(void)
 {
-	printk("<1>" "hello kernel\n");
+	printk("%s:hello kernel\n", __FUNCTION__);
 	return 0;
 }
 
-static void __exit hello_kernel_exit(void)
+/* the exit function */
+static void __exit hellokernel_exit(void)
 {
-	printk("<1>" "goodbye kernel\n");
+	printk("%s:goodbye kernel\n", __FUNCTION__);
 }
 
-module_init(hello_kernel_init);
-module_exit(hello_kernel_exit);
-MODULE_LICENSE("Dual BSD/GPL");
+module_init(hellokernel_init);
+module_exit(hellokernel_exit);
+MODULE_LICENSE("GPL");
+
