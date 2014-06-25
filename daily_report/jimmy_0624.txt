@@ -1,0 +1,10 @@
+  Today is Tuesday.The weather is a bit hot.On the way to work in the morning
+,the sun is shining.Later,I need to wear a hat to go out.Today I am still the
+first one to arrive to company.This habit is good,I need to keep it.In the morning
+,I have read a book about linux device driver.I learn char device driver.Then 
+I try to write a simple char device driver.The simple driver need include 3 
+parts of functions.Now I just can complete one.I need learn more.
+  In the afternoon,we get together to have a meeting for last week.By watching 
+the report,I konw what I need to do.Everyone is responsiblefor a project.They 
+need to solve the problem independently.Thus,their ability is very strong.I need
+to learn from them. Then zhouzhou teachs us some about linux for an hour. 
