@@ -1,0 +1,10 @@
+  Today is Wednesday.The temperature is a little low.I feel it`s gonging to rain
+,but I forget where I put my umberlla.Today,not many people waiting in the bus 
+queue.I am very lucky.
+  Today I learn a lot.Before,my conception of node about linux device is very fuzzy
+.Through reading the book guangwei recommended,I understand the concept of node.I 
+konw the application is how to send the parameters passed to the driver.Then I try 
+to write a globlemem virtual device driver.Although it is an example of the book,but
+I studay by writing the device driver to understand more details of the knowledge.
+Then I solve the problem about C language algorithm.It is raining,I will walk without
+umberlla in the rain.
