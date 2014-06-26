@@ -9,7 +9,7 @@
  *      This file is a kernel module.
  *
  * Author/Created Date:
- *      Guangwei Jiang, Jun25'14
+ *      Longbin Li, <beangr@163.com> Jun25'14
  *
  * Modification History:
  * 
@@ -21,11 +21,6 @@
 #include <linux/init.h>
 #include <linux/module.h>
 
-/* MACROS */
-/* DEFINES */
-/* CONSTANTS AND VARIABLES */
-/* INTERNAL FUNCTIONS */
-/* EXTERNAL FUNCTIONS */
 
 /* IMPLEMENTATION */
 /* the entry function */
