@@ -1,7 +1,7 @@
-In the morning I learned the shell scripts. I realized that the variable is unnessary to declare, we could use "=" to evaluation the right value to the variable, and if we want to use it again, wo should add "$" before the variable. Then I write a shell scripts to configure ubuntu for embeded develeping environment, see the following.
+In the morning I learned the shell scripts. I realized that the variable is unnecessary to declare, we could use "=" to evaluating the value on the right to the variable, and if we want to use it again, wo should add "$" before the variable. Then I write a shell scripts to configure ubuntu for embedded develepment environment, see the following.
 ---------------------------------------------------
 #! /bin/bash
-# this script is available for ubuntu to configurate embeded environment
+# this script is available for ubuntu to configurate embedded environment
 sudo apt-get update		#update the source.list
 sudo apt-get upgrade	#upgrade the software have installed on the system
 
@@ -38,12 +38,12 @@ fi
 echo "build succeeded, congratulations !"
 ------------------------------------------------
 And then I learned user management.
-If you want to add a user named John, you can do this:
-	First, change to root and use the command "useradd -m -s /bin/bash John", -m means create user's home directory, and -s to appoint user's shell class, sh, csh, tcsh or bash;
+If you want to add an user named John, you can do this:
+	First, change to root and use the command "useradd -m -s /bin/bash John", -m means to creatie user's home directory, and -s to appoint user's shell class, sh, csh, tcsh or bash;
 	Then, use "passwd john" to set user's password, if you don't do this step, the user can't login the system;
 	If you want the new user John could use "sudo", you need to modify the file "/etc/sudoers".
 If you want to delete the user John, you could do this:
 	Use the command "sudo userdel -r John" to delete the user and the home directory, or use "sudo userdel John" just delete user John but keep the directory.
 If you want to modify user's name John to mike, do this:
-	Execute "sudo usermod -l mike -m -d /home/mike John", -l means modify user's name to mike, -d means appoint user's directory /home/mike and the directory /home/mike should exist; -m means move the old directory to the new directory, if the old directory not exist, then create it.
+	Execute "sudo usermod -l mike -m -d /home/mike John", -l means to modify user's name to mike, -d means to appoint user's directory /home/mike and the directory /home/mike should exist; -m means to move the old directory to the new directory, if the old directory not exist, then create it.
 

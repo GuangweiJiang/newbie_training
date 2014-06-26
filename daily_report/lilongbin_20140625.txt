@@ -2,6 +2,6 @@ Today I learned how to build and run modules, I read Chapter2 of the third editi
 Then I programmed a "hello kernel" module. This module defines two functions, one to be invoked when the module is loaded into the kernel (hellokernel_init) and one for when the module is removed (hellokernel_exit). The module_init and module_exit lines use special kernel macros to indicate the role of these two functions. Another special macro (MODULE_LICENSE) is used to tell the kernel that module bears a free license GPL; without such a license declaration, the kernel complains "module license 'unspecified' taints kernel." when the loaded.
 The printk function is defined in the Linux kernel and made available to modules; it behaves similarly to the standard C library function printf. The kernel needs its own printing function because it runs by itself, without the help of the C library. 
 Then write the makefile, make it, insert the module.
-Note that only supueruser can load and unload a module.
+Note that only superuser can load and unload a module.
 Maybe, you couldn't see the messages that you want to output through the module when it's inserted. The messages goes to one of the system log files, such as /var/log/messages. we can use the command "dmesg" to see the output of the kernel module.
 

@@ -1,0 +1,2 @@
+Today I continue to studay the kernel module.
+

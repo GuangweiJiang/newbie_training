@@ -1,4 +1,4 @@
 	Today is the first day I join in wistron, I am so glad that the group I joined in is very closed to linux kernel and device drivers and the colleagues are very friendly.
 	Then Teacher Jiang made a training plan for us freshmen, He said that we should learn the linux driver first of all, and the book named "linux device driver" is worth reading. The training plan contains char devices, block devices, misc devices and so on.
-	After this, I was taught to use github. First of all, register a ueranme on the websit of github.com, search the person, and click Fork. Then, input the command "$git clone http//:github.com/beangr/newbie_training.git", then you can write a document to upload for test, "$git add filename", "$git commit","$git push".
+	After this, I was taught to use github. First of all, register a useranme on the website of github.com, search the person, and click Fork. Then, input the command "$git clone http//:github.com/beangr/newbie_training.git", then you can write a document to upload for test, "$git add filename", "$git commit","$git push".
 
