@@ -74,7 +74,7 @@ struct globalmem_dev *globalmem_devp;
 
 int globalmem_open(struct inode *inode,struct file *filp)
 {  
- filp->private_data = globalmem_devp; //将设备结构体指针赋值给文件私有数据指针  
+ filp->private_data = globalmem_devp; //将设备结构体的指针赋值给文件指针 
  return 0;
 } 
 //-----------------------------------------------------------------
@@ -222,13 +222,13 @@ static loff_t  globalmem_llseek(struct file *filp,loff_t offset,int orig)
 };
 static void globalmem_setup_cdev(struct globalmem_dev *dev,int index)  
 {  
- int err,devno = MKDEV(globalmem_major,index);  
- cdev_init(&dev->cdev,&globalmem_fops);  
- dev->cdev.owner = THIS_MODULE;  
- dev->cdev.ops = &globalmem_fops;  
- err = cdev_add(&dev->cdev,devno,1);  
+ int err,devno = MKDEV(globalmem_major,index); //把设备号赋值给devno 
+ cdev_init(&dev->cdev,&globalmem_fops); //初始化cdev
+ //dev->cdev.owner = THIS_MODULE;  
+ //dev->cdev.ops = &globalmem_fops;      //建立cdev 与file_operation之间的联系
+ err = cdev_add(&dev->cdev,devno,1);  //向系统申请添加一个cdev
  if(err)  
- {  
+ { 
   printk(KERN_NOTICE"Error %d adding LED %d",err,index);  
  }  
    
@@ -242,10 +242,10 @@ static void globalmem_setup_cdev(struct globalmem_dev *dev,int index)
 static int globalmem_init(void)
 
 {int result;  
- dev_t devno = MKDEV(globalmem_major,0); 
-if(globalmem_major) //申请设备号  
+ dev_t devno = MKDEV(globalmem_major,0);  //使用此宏可以通过主设备号和次设备号生成dev_t
+if(globalmem_major)  
  {  
-  result = register_chrdev_region(devno,1,"globalmem");  
+  result = register_chrdev_region(devno,1,"globalmem");  //向系统申请设备号
  }  
  else  //动态申请设备号  
  {  
@@ -258,15 +258,15 @@ if(globalmem_major) //申请设备号
   return result;  
  }  
    
- globalmem_devp = kmalloc(sizeof(struct globalmem_dev),GFP_KERNEL); //申请设备结构体的内存  
+ globalmem_devp = kmalloc(sizeof(struct globalmem_dev),GFP_KERNEL); //向内核申请globalmem结构体的内存  
  if(!globalmem_devp)  
  {  
   result = -ENOMEM;  
   goto fail_malloc;  
  }  
    
- memset(globalmem_devp,0,sizeof(struct globalmem_dev));  
- globalmem_setup_cdev(globalmem_devp,0);      //初始化和添加cdev
+ memset(globalmem_devp,0,sizeof(struct globalmem_dev));  //初始化申请的内存
+ globalmem_setup_cdev(globalmem_devp,0);      //向系统申请添加关于globalmem的cdev
  return 0;  
    
  fail_malloc:unregister_chrdev_region(devno,1);  
