@@ -1,0 +1,6 @@
+http://bbs.byr.cn/#!article/Embedded_System/5625?p=2    谈系统调用查看方法的
+
+http://hi.baidu.com/huishou/item/2c52f90c4b6e2ce2a1103461   讲ioctl 最新用法的
+
+http://blog.sina.com.cn/s/blog_55465b470100ri1e.html  讲驱动的工作原因的，很不错，讲的是大逻辑，一定要看
+
