@@ -2,8 +2,8 @@
 one to arrive to company.In the morning,I get a computer from the warehouse.The Dell 
 computer is very thin and very beautiful.When I get the computer,I am very happy.I get
 a mail account.Then I can use the email communicate with colleagues.
-   Today,I have done a C language question.Tt is about sorting.Research for an hour,I 
+   Today,I have done a C language question.It is about sorting.Research for an hour,I 
 finally have an idea.I still do not understand some details.I guess tomorrow it must be
-solved.Then,I learn the basic conception of char device drive.I learn some conceptions,sush 
+solved.Then,I learn the basic conception of char device drive.I learn some conceptions,such 
 as major and minor device number.The exercise need to be completed for 5 days.I need some 
 more hard.
