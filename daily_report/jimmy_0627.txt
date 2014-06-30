@@ -1,0 +1,9 @@
+  Today is Friday, I am still very early to the company.
+  Today, I supplement the globalmem driver's function.I try to create the device
+file node manually.I use "echo" to communicate with device driver.In accordance 
+with the requirements,it needs to use the API to create the device file node such 
+as class_create, class_device_create.I still don't understand how to do, I need to 
+read some books guang wei recommended.Then I write C language homework today, I find
+that my C language level is very poor .I don't know some operation symbols.About the 
+concept of bit operation, I have not used before.I need to spend more time, more 
+efforts to learn.
