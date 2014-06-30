@@ -5,6 +5,6 @@ first one to arrive to company.This habit is good,I need to keep it.In the morni
 I try to write a simple char device driver.The simple driver need include 3 
 parts of functions.Now I just can complete one.I need learn more.
   In the afternoon,we get together to have a meeting for last week.By watching 
-the report,I konw what I need to do.Everyone is responsiblefor a project.They 
+the report,I konw what I need to do .Everyone is responsible for a project.They 
 need to solve the problem independently.Thus,their ability is very strong.I need
 to learn from them. Then zhouzhou teachs us some about linux for an hour. 
