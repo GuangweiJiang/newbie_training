@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-	obj-m += chdrv.o
+	obj-m += chardrv.o
 else
 	KVERSION=`uname -r`
 	KERNELDIR=/usr/src/linux-headers-$(KVERSION)
