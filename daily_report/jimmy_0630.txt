@@ -1,0 +1,11 @@
+  Today is Monday.The weather is good.
+  In the morning,I improve my code about globalmem.I use API 
+to creat the device file node instead of shell command such as
+class_creat,class_device_create,class_destroy,class_destroy, 
+class_device_destry,device destroy.In the compilation process,
+the kernel breakdown because of wild pointer.Restart the computer
+,the  kernel becomes normal.Today the program appears a variety of 
+mistakes,I spend a lot of time to analyze it.I feel I learn a lot in
+the process.
+ It is time to get off work,but my plan is not yet complete.I am going
+ to be late back to home. 
