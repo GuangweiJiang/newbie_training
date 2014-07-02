@@ -45,11 +45,11 @@ int main(int argc, char *argv[])
     FILE *fp;  
     for (i=0;i<=N;i++) 
         	clr(i);
-	if((fp=fopen("argv[1]","r"))==NULL)
+	if((fp=fopen(argv[1],"r"))==NULL)
 	{
 		printf("Cannot open fire %s",argv[1]);
-		getch();
-		exit(1);
+		getchar();
+		return -1;
 	}
     while(!feof(fp))
 	{
