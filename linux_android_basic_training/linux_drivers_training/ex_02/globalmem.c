@@ -38,13 +38,14 @@
 #include <asm/io.h>
 #include <asm/uaccess.h>
 #include <linux/slab.h>
+#include <linux/device.h>
 
 //-----------------------------------------------------------------
 // MACROS
 //-----------------------------------------------------------------
 #define GLOBALMEM_SIZE 0X1000 /*全局内存最大4KB*/  
-#define MEM_CLEAR 0x1 /*清零全局内存*/  
-#define GLOBALMEM_MAJOR 200
+#define MEM_CLEAR 0x1   
+#define GLOBALMEM_MAJOR 201
 
 //-----------------------------------------------------------------
 // DEFINES
@@ -56,6 +57,8 @@
 //-----------------------------------------------------------------
 // CONSTANTS AND VARIABLES
 //-----------------------------------------------------------------
+static struct class *globalmem_class;      //定义一个class类结构体变量   
+static struct device *globalmem_class_dev; //定义一个类设备结构体变量
 static int globalmem_major = GLOBALMEM_MAJOR;/*预设的globalmem的主设备号*/
 
 
@@ -74,6 +77,7 @@ struct globalmem_dev *globalmem_devp;
 
 int globalmem_open(struct inode *inode,struct file *filp)
 {  
+printk(KERN_INFO "hello.world7\n");
  filp->private_data = globalmem_devp; //将设备结构体的指针赋值给文件指针 
  return 0;
 } 
@@ -90,6 +94,7 @@ int globalmem_release(struct inode *inode,struct file *filp)
 static long globalmem_ioctl(struct file *filp,unsigned int cmd,unsigned long arg)
 {  
  struct globalmem_dev *dev = filp->private_data; //获得设备结构体指针  
+ printk(KERN_INFO "hello.world6\n");
  switch(cmd)  
  {  
   case  MEM_CLEAR:  
@@ -109,9 +114,10 @@ static ssize_t globalmem_read(struct file *filp,char __user *buf,size_t size,lof
  unsigned long p = *ppos;  
  unsigned int count = size;  
  int ret = 0;  
+
  struct globalmem_dev *dev = filp->private_data; //获得设备结构体指针  
    
- if(p >= GLOBALMEM_SIZE)  //分析和获取有效的写长度  
+ if(p >GLOBALMEM_SIZE)  //分析和获取有效的写长度  
  {  
   return count ? -ENXIO:0;  
  }  
@@ -140,7 +146,6 @@ static ssize_t globalmem_write(struct file *filp,const char __user *buf,size_t s
  unsigned long p = *ppos;  
  unsigned int count = size;  
  int ret=0;  
-   
  struct globalmem_dev *dev = filp->private_data;  
    
  if(p >= GLOBALMEM_SIZE)  //分析和获取有效的写长度  
@@ -224,8 +229,9 @@ static void globalmem_setup_cdev(struct globalmem_dev *dev,int index)
 {  
  int err,devno = MKDEV(globalmem_major,index); //把设备号赋值给devno 
  cdev_init(&dev->cdev,&globalmem_fops); //初始化cdev
- //dev->cdev.owner = THIS_MODULE;  
- //dev->cdev.ops = &globalmem_fops;      //建立cdev 与file_operation之间的联系
+ dev->cdev.owner = THIS_MODULE;  
+ dev->cdev.ops = &globalmem_fops;      //建立cdev 与file_operation之间的联系
+ printk(KERN_INFO "hello.world3\n");
  err = cdev_add(&dev->cdev,devno,1);  //向系统申请添加一个cdev
  if(err)  
  { 
@@ -252,10 +258,9 @@ if(globalmem_major)
   result = alloc_chrdev_region(&devno,0,1,"globalmem");  
   globalmem_major = MAJOR(devno);  
  }  
-   
  if(result < 0)  
  {  
-  return result;  
+  return result;  //申请失败返回一个负数
  }  
    
  globalmem_devp = kmalloc(sizeof(struct globalmem_dev),GFP_KERNEL); //向内核申请globalmem结构体的内存  
@@ -264,9 +269,25 @@ if(globalmem_major)
   result = -ENOMEM;  
   goto fail_malloc;  
  }  
-   
+   //globalmem_class = class_create(THIS_MODULE, "globalmem_sys_class");
+    //if(IS_ERR(globalmem_class)) {
+            //printk("Err: failed in creating class.\n");
+             //goto fail_malloc;
+  //} 
+  /* register your own device in sysfs, and this will cause udev to create corresponding device node */
+  
  memset(globalmem_devp,0,sizeof(struct globalmem_dev));  //初始化申请的内存
  globalmem_setup_cdev(globalmem_devp,0);      //向系统申请添加关于globalmem的cdev
+ //device_create(globalmem_class, NULL, MKDEV(globalmem_major, 0), NULL, "globalmem");
+globalmem_class = class_create(THIS_MODULE, "globalmem_sys_class");        
+    if (IS_ERR(globalmem_class))    
+        return PTR_ERR(globalmem_class);    
+      
+    globalmem_class_dev = device_create(globalmem_class, NULL, MKDEV(globalmem_major, 0), NULL, "globalmem_dev");       
+    if (unlikely(IS_ERR(globalmem_class_dev)))    
+        return PTR_ERR(globalmem_class_dev);  
+  printk (KERN_INFO "Registered character driver\n");
+ printk(KERN_INFO "hello.world1\n");
  return 0;  
    
  fail_malloc:unregister_chrdev_region(devno,1);  
@@ -275,11 +296,16 @@ if(globalmem_major)
 //-----------------------------------------------------------------
 // FUNCTIONS :The function is used to uninstall the modules
 //-----------------------------------------------------------------
+//static struct class    *device_class;
 static void  globalmem_exit(void)
 {  
+ int devno = MKDEV(globalmem_major,MKDEV(globalmem_major,0));
  cdev_del(&globalmem_devp->cdev); //注销cdev  
  kfree(globalmem_devp);          //释放设备结构体内存  
+ printk(KERN_INFO "hello.world2\n");
  unregister_chrdev_region(MKDEV(globalmem_major,0),1); //释放设备号  
+ device_unregister(globalmem_class_dev);    
+    class_destroy(globalmem_class);
 }  
 
 MODULE_LICENSE("Dual BSD/GPL");
