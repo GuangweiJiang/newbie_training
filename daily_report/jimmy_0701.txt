@@ -1,0 +1,11 @@
+  Today is Tuesday.When I walk to company,it is raining.
+  In the morning,director let me show the globalmem char driver
+program.Then he let me make a report to everyone next week.I need
+complete the PPT about the globalmem next Monday.I need to prepare
+for this.According to the plan,I try to write misc driver.I read 
+the book named essential linux device drivers.The book has a chapter
+that is about misc driver.I learn a lot.The misc driver simplifies 
+the way these driver are initalized.It is very different from the 
+globalmem.I need to learn more.
+  In the afternoon,we have a meeting.Jerry tells us some konwledge about 
+touch.
