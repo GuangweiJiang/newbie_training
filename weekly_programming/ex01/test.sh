@@ -5,8 +5,8 @@ echo "gcc ok"
 read -p "Generate source datas. yes or no ? <y/n>" select
 if [ "$select" == "y" ]
 then
-	./generate
+	./generate.o
 fi
 read -p "press <ENTER> to excute sort."
-./sort
+./sort.o
 

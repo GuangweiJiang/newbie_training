@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
 	lseek(fd, 0, SEEK_SET);
 	read(fd, buf2, 50);
 	printf("%s\n", buf2);
-	lseek(fd, 0, SEEK_SET);
+//	lseek(fd, 0, SEEK_SET);
 
 	ioctl(fd, SCULL_READ, &rdata);
 	printf("read:%#x\n", rdata);
