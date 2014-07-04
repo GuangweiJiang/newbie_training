@@ -139,7 +139,7 @@ static loff_t misc_llseek(struct file *filp, loff_t offset, int orig)
 }
 
 /* ioctl */
-static int misc_ioctl(struct file *filp, unsigned int cmd,
+static long /*int*/ misc_ioctl(struct file *filp, unsigned int cmd,
 							unsigned long arg)
 {
     switch(cmd) {
