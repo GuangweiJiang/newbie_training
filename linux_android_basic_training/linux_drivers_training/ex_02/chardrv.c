@@ -143,7 +143,7 @@ static loff_t scull_llseek(struct file *filp, loff_t offset, int orig)
 }
 
 /* ioctl */
-static int scull_ioctl(struct file *filp, unsigned int cmd,
+static long /*int*/ scull_ioctl(struct file *filp, unsigned int cmd,
 							unsigned long arg)
 {
     switch(cmd) {
@@ -210,7 +210,7 @@ static int scull_init(void)
     cls = class_create(THIS_MODULE, "scull"); 
     device_create(cls, NULL, devno, NULL, "scull0");
 
-	printk("----------------------\n");
+	printk("--------------------------------------------\n");
 	printk("%s\n", __func__);
 	return 0;
 
