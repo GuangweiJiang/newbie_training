@@ -1,13 +1,13 @@
 ifneq ($(KERNELRELEASE),)
 	obj-m += chardrv.o
 else
-	KVERSION=`uname -r`
-	KERNELDIR=/usr/src/linux-headers-$(KVERSION)
-	#KERNELDIR=/usr/src/linux-source-3.2.0/linux-source-3.2.0
+	KERNELDIR=/opt/kernel
+#KVERSION=`uname -r`
+#KERNELDIR=/usr/src/linux-headers-$(KVERSION)
 
 all:
 	PWD=$(shell pwd)
-	$(MAKE) -C $(KERNELDIR) M=$(PWD)
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
 clean:
 	rm -rf .*.cmd *.o *.mod.c *.ko .tmp_versions module* Module*
