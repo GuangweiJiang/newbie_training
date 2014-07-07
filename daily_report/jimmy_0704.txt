@@ -1,0 +1,10 @@
+  Today is Friday, the weather is fine.
+  Today I mainly learn the konwledge about ioctl.Dozens of pages in the 
+book is about this.At first, I am a little not understand.The book is 
+written too professional.I spend a lot of time to understand the book 
+in terms of ioctl.When I write a program about this, I realize that is 
+a very simple.I find that I start to think too complicated.I have come 
+across this before, and now could not remember how to do it.I am a little embarrassed.
+  Afternoon, I learn some knowledge about the C language.Then I read the 
+second C language homework,then I write a program that I feel should be 
+on.I am ready to submit after.
