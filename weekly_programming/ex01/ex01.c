@@ -43,22 +43,22 @@ int main(int argc, char *argv[])
 {   
     int i,n;
     FILE *fp;  
-    for (i=0;i<=N;i++) 
+	for (i=0;i<=N;i++) 
         	clr(i);
 	if((fp=fopen(argv[1],"r"))==NULL)
 	{
-		printf("Cannot open fire %s",argv[1]);
+		printf("Cannot open file %s",argv[1]);
 		getchar();
 		return -1;
 	}
-    while(!feof(fp))
+	while(!feof(fp))
 	{
 		fscanf(fp,"%d",&n);  //  读出的值在n里
 		set(n);
 	}
 		fclose(fp);
-    for (i = 0;i<=N; i++)  
-        	if (test(i))  
+	for (i = 0;i<=N; i++)  
+		if (test(i))  
                 printf("%d\n", i);  
                 return 0;  
 }
