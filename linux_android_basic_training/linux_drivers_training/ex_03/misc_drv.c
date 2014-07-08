@@ -107,7 +107,7 @@ static loff_t misc_llseek(struct file *filp, loff_t offset, int orig)
 	loff_t ret = 0;
 	printk("%s\n", __func__);
 	switch(orig){
-	case 0:
+	case 0: /* SEEK_SET */
 			if (offset < 0) {
 				ret = -EINVAL;
 				break;
@@ -119,7 +119,7 @@ static loff_t misc_llseek(struct file *filp, loff_t offset, int orig)
 			filp->f_pos = (unsigned int)offset;
 			ret = filp->f_pos;
 			break;
-	case 1:
+	case 1: /* SEEK_CUR */
 			if ((filp->f_pos + offset > MEM_SIZE)) {
 				ret = -EINVAL;
 				break;
@@ -131,6 +131,8 @@ static loff_t misc_llseek(struct file *filp, loff_t offset, int orig)
 			filp->f_pos += offset;
 			ret = filp->f_pos;
 			break;
+	case 2: /* SEEK_END - Not supported */
+			return -EINVAL;
 	default:
 			ret = -EINVAL;
 			break;
@@ -194,7 +196,7 @@ static int misc_init(void)
 	}
 	memset(misc_vdp, 0, sizeof(struct misc_resource));
 
-	/* misc_register(&(misc_vdp->misc_dev)); 无法创建设备节点 */
+	/* misc_register(&(misc_vdp->misc_dev)); couldn't create device node */
 	misc_register(&misc_dev);
 
 	printk("--------------------------------------------\n");
@@ -208,9 +210,10 @@ fail_malloc:misc_deregister(&misc_dev);
 /* the exit function */
 static void misc_exit(void)
 {
-	//misc_deregister(&misc_vdp->misc_dev);
+	//misc_deregister(&misc_vdp->misc_dev); 
 	misc_deregister(&misc_dev);
 
+	kfree(misc_vdp);
 	printk("%s\n", __func__);
 }
 module_init(misc_init);
