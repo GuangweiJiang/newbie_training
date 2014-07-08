@@ -111,7 +111,7 @@ static loff_t scull_llseek(struct file *filp, loff_t offset, int orig)
 	loff_t ret = 0;
 	printk("%s\n", __func__);
 	switch(orig){
-	case 0:
+	case 0: /* SEEK_SET */
 			if (offset < 0) {
 				ret = -EINVAL;
 				break;
@@ -123,7 +123,7 @@ static loff_t scull_llseek(struct file *filp, loff_t offset, int orig)
 			filp->f_pos = (unsigned int)offset;
 			ret = filp->f_pos;
 			break;
-	case 1:
+	case 1: /* SEEK_SUR */
 			if ((filp->f_pos + offset > MEM_SIZE)) {
 				ret = -EINVAL;
 				break;
@@ -135,6 +135,8 @@ static loff_t scull_llseek(struct file *filp, loff_t offset, int orig)
 			filp->f_pos += offset;
 			ret = filp->f_pos;
 			break;
+	case 2: /* SEEK_END - Not supported */
+			return -EINVAL;
 	default:
 			ret = -EINVAL;
 			break;
@@ -204,7 +206,10 @@ static int scull_init(void)
     cdev_init(&(scull_info->scull_cdev), &scull_fops);
 
     /* add the scull_cdev and devno to the kernel cdev list */
-    cdev_add(&(scull_info->scull_cdev), devno, 1);
+    if (cdev_add(&(scull_info->scull_cdev), devno, 1) < 0){
+		res = -EFAULT;
+		goto fail_cdev_add;
+	}
     
     /* create a class and a device belonging to the class*/
     cls = class_create(THIS_MODULE, "scull"); 
@@ -214,6 +219,7 @@ static int scull_init(void)
 	printk("%s\n", __func__);
 	return 0;
 
+fail_cdev_add:kfree(scull_info);
 fail_malloc:unregister_chrdev_region(devno, 1);
     return res;
 }
@@ -225,6 +231,7 @@ static void scull_exit(void)
     unregister_chrdev_region(MKDEV(major, 0), 1);
     device_destroy(cls, MKDEV(major, 0));
     class_destroy(cls);
+	kfree(scull_info);
 
 	printk("%s\n", __func__);
 }
