@@ -25,18 +25,22 @@ int main(int argc, char *argv[]){
 	char buf1[50] = "hello hello how are you";
 	char buf2[50];
 
-	write(fd, buf1, 50);
-	lseek(fd, 0, SEEK_SET);
-	read(fd, buf2, 50);
-	printf("%s\n", buf2);
+	if (write(fd, buf1, 50) != -1){
+		lseek(fd, 0, SEEK_SET);
+		if (read(fd, buf2, 50) != -1){
+			printf("%s\n", buf2);
+		}
+	}
 
-	ioctl(fd, SCULL_READ, &rdata);
-	printf("read:%#x\n", rdata);
-	sleep(1);
+	if (ioctl(fd, SCULL_READ, &rdata) != -1) {
+		printf("read:%#x\n", rdata);
+		sleep(1);
+	}
 
-	printf("write:%#x\n", wdata);
-	ioctl(fd, SCULL_WRITE, &wdata);
-	sleep(1);
+	if (ioctl(fd, SCULL_WRITE, &wdata) != -1) {
+		printf("write:%#x\n", wdata);
+		sleep(1);
+	}
 
 	return 0;
 }
