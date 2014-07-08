@@ -1,0 +1,9 @@
+  Toady is Monday.The weather is fine.Last night I lie awake.
+  Today I write a report about globalmem driver.I will tell this 
+report tomorrow.The report is divided into three parts.The first 
+is globalmem introduction,the second is code analysis,the third 
+is example demonstration.The report has 22 pages.I spend a lot 
+of time.
+  Tomorrow I will go to training that is for new in the company.
+Then I learn C landuage for a long time.I am a little rusty on 
+file operation.I write some code about file operation.
