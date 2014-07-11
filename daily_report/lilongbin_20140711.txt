@@ -1,0 +1,4 @@
+Today I started to learn concurrency and race condition.
+Suppose for a moment that two or more processes are independently attempting to write to the same offset within the same char device. Since nore than one process is assigning to the same location, clearly only one of the assignments will prevail. It's assignmen will be overwritten by the other processes assign first. The memory allocated earlier will be dropped and never returned to the system.
+This sequence of events is a demonstration of a race condition. Race conditions are a result of uncontrolled access to shared data. So carefully-written kernel code should have a minimum of sharing, however, such sharing is often required.
+To make sure that only one thread of excution can manipulate a shared resource at any time, we could use the technique for access management is called locking or mutual exclusion. the locking technique can be semaphore, mutexe or spinlock.
