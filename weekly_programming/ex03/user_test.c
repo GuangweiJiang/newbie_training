@@ -12,11 +12,11 @@
 #include "linklist.h"
 
 /* INTERNAL FUNCTIONS */
-int print_cb(void *p_node, void *p_data)
+int print_cb(void *p_personinfo, void *p_data)
 {
-	if(((node*)p_node)->p_next){
-		printf("%d ",((node*)p_node)->p_next->num);
-		if((((node*)p_node)->p_next->p_next) == NULL){
+	if(((personinfo*)p_personinfo)->p_next){
+		printf("%d ",((personinfo*)p_personinfo)->p_next->id);
+		if((((personinfo*)p_personinfo)->p_next->p_next) == NULL){
 			printf("\n");
 			return 1;
 		}
@@ -31,11 +31,11 @@ int main(){
 	insert_tail(1);
 	insert_tail(2);
 	insert_tail(3);
-	printf("The valid node number is :%d\n", get_size());
+	printf("The valid personinfo number is :%d\n", get_size());
 
 	for_each(print_cb, NULL);
 	printf("tail:%d ", get_tail());
-	printf("\nremove_node(1) return :%d\n", remove_node(1));
+	printf("\nremove_personinfo(1) return :%d\n", remove_personinfo(1));
 	for_each(print_cb, NULL);
 	printf("tail:%d\n", get_tail());
 

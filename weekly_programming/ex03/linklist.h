@@ -12,10 +12,13 @@
 #define __LIKKLIST_H__
 
 /* DEFINES */
-typedef struct node{
-	int num;
-	struct node *p_next;
-} node;
+typedef struct personinfo{
+	int id;
+	char name[20];
+	char gender[10];
+	int age;
+	struct personinfo *p_next;
+} personinfo;
 
 void ll_init();
 void ll_deinit();
@@ -28,6 +31,6 @@ int get_head();
 int get_tail();
 int get_size();
 void for_each(int (*)(void *, void *), void *);
-int remove_node(int);
+int remove_personinfo(int);
 
 #endif //__LINKLIST_H__
