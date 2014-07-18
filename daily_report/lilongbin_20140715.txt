@@ -1,0 +1,5 @@
+After new staff training I continue to learn data structure about link list.
+Link list is not continuous, not on a physical storage unit sequential storage structure, logical sequence of data elements is through the list of Pointers in order to realize the link. 
+List is composed of a series of nodes, nodes can be generated dynamically at runtime. 
+Each node consists of two parts: one is to store data element data fields, another is to store the next node address pointer field.
+There are many different types: singly linked list, two-way chain table and circular linked list.
