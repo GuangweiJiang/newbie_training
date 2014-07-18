@@ -1,0 +1,4 @@
+Today I start to learn the data structure of link list.
+As we all known that data structure has a decisive role in the software programming, may say that a system engineering can't depart from the support of data structure. A good software developers, data structure is the essential basic knowledge.
+Data structure is the way computer store, organize data. Data structure refers to the presence of one or more specific relationship between each other in the collection of data elements.
+Then it takes me a whole afternoon learning new lessons of new staff.
