@@ -37,6 +37,7 @@
 #include <linux/errno.h>
 #include <linux/slab.h> /*for kmalloc()*/
 #include <linux/semaphore.h>/*for down() up() */
+#include <asm/semaphore.h>
 //-----------------------------------------------------------------
 // MACROS
 //-----------------------------------------------------------------
@@ -65,6 +66,7 @@ struct globalmem_dev
 {  
    struct cdev cdev;  //cdev结构体  
    unsigned char mem[GLOBALMEM_SIZE];  //全局内存  
+   struct semaphore sem;
 };
 
 
@@ -107,6 +109,8 @@ static ssize_t misc_read(struct file *filp,char __user *buf,size_t size,loff_t *
  {  
   count = GLOBALMEM_SIZE - p;  
  }  
+ if(down_interruptible(&dev->sem))
+	return -ERESTARTSYS;
    
  if(copy_to_user(buf,(void *)(dev->mem+p),count))  //内核空间->用户空间  
  {  
@@ -117,7 +121,8 @@ static ssize_t misc_read(struct file *filp,char __user *buf,size_t size,loff_t *
   *ppos += count;  
   ret = count;  
   printk(KERN_INFO "read   %d bytes(s) from   %lu\n",count,p);  
- }  
+ }
+  up(&dev->sem);  
  printk(KERN_INFO "hello.world.read\n");
  return ret;  
 }  
@@ -140,7 +145,8 @@ static ssize_t misc_write(struct file *filp,const char __user *buf,size_t size,l
  {  
   count = GLOBALMEM_SIZE - p;  
  }   
-   
+  if(down_interruptible(&dev->sem))
+	return -ERESTARTSYS;
  if(copy_from_user(dev->mem + p,buf,count)) // 用户空间->内核空间  
  {  
   ret = -EFAULT; 
@@ -152,6 +158,7 @@ static ssize_t misc_write(struct file *filp,const char __user *buf,size_t size,l
   ret = count;  
   printk(KERN_INFO "written %d bytes(s) from %lu\n",count,p);  
  } 
+  up(&dev->sem); 
  printk(KERN_INFO "hello.world.write\n"); 
  return ret;  
 } 
@@ -233,6 +240,7 @@ static int globalmem_init(void)
   		printk("bad address\n");  
  	}  
 	misc_register(&misc);
+	init_MUTEX(&globalmem_devp->sem);
 	printk("globalmem_init\n");
 	return 0; 
 }
