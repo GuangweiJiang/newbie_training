@@ -1,9 +1,9 @@
 ifneq ($(KERNELRELEASE),)
 	obj-m += chardrv.o
 else
-	KERNELDIR=/opt/kernel
-#KVERSION=`uname -r`
-#KERNELDIR=/usr/src/linux-headers-$(KVERSION)
+#	KERNELDIR=/opt/kernel
+KVERSION=`uname -r`
+KERNELDIR=/usr/src/linux-headers-$(KVERSION)
 
 all:
 	PWD=$(shell pwd)
