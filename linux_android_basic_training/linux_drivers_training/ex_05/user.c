@@ -9,38 +9,25 @@
 #include <sys/types.h>
 #include <fcntl.h>
 
-#define SCULL_READ	0X10001
-#define SCULL_WRITE	0X10002
-
 int main(int argc, char *argv[]){
-	int rdata;
-	int wdata = 0x56;
 
+	printf("pid = %d ......\n", getpid());
+
+	pid_t pid = fork();
+	if (pid != 0) {
+		sleep(1);
+	}
 	int fd = open("/dev/scull0", O_RDWR);
 	if (fd == -1) {
 		perror("open");
 		return -1;
 	}
+	printf("**open ok, pid = %d\n", getpid());
+	printf("pid=%d is visiting the device\n", getpid());
+	sleep(5);
 
-	char buf1[50] = "hello hello how are you";
-	char buf2[50];
-
-	if (write(fd, buf1, 50) != -1){
-		lseek(fd, 0, SEEK_SET);
-		if (read(fd, buf2, 50) != -1){
-			printf("%s\n", buf2);
-		}
-	}
-
-	if (ioctl(fd, SCULL_READ, &rdata) != -1) {
-		printf("read:%#x\n", rdata);
-		sleep(1);
-	}
-
-	if (ioctl(fd, SCULL_WRITE, &wdata) != -1) {
-		printf("write:%#x\n", wdata);
-		sleep(1);
-	}
+	close(fd);
+	printf("pid=%d exit, closing device\n", getpid());
 
 	return 0;
 }
