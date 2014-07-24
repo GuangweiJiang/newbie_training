@@ -4,7 +4,7 @@
  * Copyright (C) 2014 Wistron
  * All rights reserved.
  * Description:			This file is a char device drvier.
- * Author/Created Date:	Longbin Li, <beangr@163.com> Jun26'14
+ * Author/Created Date:	Longbin Li, <beangr@163.com> Jul20'14
  * Modification History:
  * Note:
  */
@@ -40,6 +40,8 @@ static int major;
 
 //static struct cdev scull_cdev;
 static struct class *cls; 
+/* define semaphore var */
+static struct semaphore sema;
 
 /* INTERNAL FUNCTIONS */
 /* open */
@@ -47,6 +49,12 @@ static int scull_open(struct inode *inode, struct file *filp)
 {
 	filp->private_data = scull_info;
     printk("%s\n", __func__);
+
+	/* get semaphore */
+	printk("go to sleeping ...\n");
+	down(&sema);
+	printk("** open device successfully\n");
+
     return 0;
 }
 
@@ -54,6 +62,10 @@ static int scull_open(struct inode *inode, struct file *filp)
 static int scull_close(struct inode *inode, struct file *filp)
 {
     printk("%s\n", __func__);
+
+	/* release semaphore */
+	up(&sema);
+	printk("**Unlocked \n");
     return 0;
 }
 
@@ -214,6 +226,9 @@ static int scull_init(void)
     /* create a class and a device belonging to the class*/
     cls = class_create(THIS_MODULE, "scull"); 
     device_create(cls, NULL, devno, NULL, "scull0");
+
+	/* initialize the semaphore */
+	sema_init(&sema, 1);
 
 	printk("--------------------------------------------\n");
 	printk("%s\n", __func__);
