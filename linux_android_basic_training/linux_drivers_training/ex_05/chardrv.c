@@ -47,13 +47,19 @@ static struct semaphore sema;
 /* open */
 static int scull_open(struct inode *inode, struct file *filp)
 {
+	int ret;
 	filp->private_data = scull_info;
     printk("%s\n", __func__);
 
 	/* get semaphore */
 	printk("go to sleeping ...\n");
-	down(&sema);
-	printk("** open device successfully\n");
+	//down(&sema);
+	ret = down_interruptible(&sema);
+	if (ret != 0) {
+		printk("** interrupted by signal\n");
+	} else {
+		printk("** open device successfully\n");
+	}
 
     return 0;
 }

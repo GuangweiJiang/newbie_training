@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
 	}
 	printf("**open ok, pid = %d\n", getpid());
 	printf("pid=%d is visiting the device\n", getpid());
-	sleep(5);
+	sleep(15);
 
 	close(fd);
 	printf("pid=%d exit, closing device\n", getpid());
