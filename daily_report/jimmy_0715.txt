@@ -1,7 +1,7 @@
   Today is Tuesday.The weather is bad.When I get up in the morning
 ,it is raining.There is no factory car,so I take a taxi for not being
 late.
-  In the morning,I learn the C landuage.The project about employee 
+  In the morning,I learn the C language.The project about employee 
 information that I write last week still can not run.I spend a lot time
 to complete it.Though modifying the code,I learn a lot.It contains a lot 
 of knowledge,such as link list,pointer,struct and arrary.
