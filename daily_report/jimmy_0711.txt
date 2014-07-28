@@ -5,7 +5,7 @@ When the examination starts,we help each other,everyone pass the
 exam.We learn a lot of professional call,such as ME,FA.We spend a 
 lot of time to have class.
 We go back to the office at three o'clock in the afternoon.Then I 
-learn C landuage.I write the third homework about C landuage list.
+learn C language.I write the third homework about C language list.
 When I compile it,there are some errors.Maybe I am wrong to understand
 some concepts.Debuging a moment,the error still can not be solved.Back 
 in the evening,I need to solve the problem.
