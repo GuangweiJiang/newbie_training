@@ -1,0 +1,8 @@
+  Today is Monday.The weather is a little hot.
+  In the morning,I get a cupboard from other department.I can put things 
+into the cupboard.In the morning,I read the book about linux device driver
+.At the beginning,my concept of interface is fuzzy.Through reading,I know
+some concept,such as I2C,GPIO and spi.I learned this in school before,but
+I forget it now.I need pay more attention to this. 
+  In the afternoon,I brush the android system into the motorola mobile phone
+.I learn a lot of knowledge,such as fastboot,adb.I am interested in this.
