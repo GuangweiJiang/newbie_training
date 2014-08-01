@@ -1,0 +1,5 @@
+It's necessary to install a 64-bit operating system operating system. Because of we need 64-bit operating system environment to execute 64-bit commands when building android image.
+We usually take advantage of ubuntu 12.04 to build our embedded development environment. Because ubuntu is a freely popular distributable, unix-like operating system that includes a linux kernel, system tools, applications, and a complete development environment.
+Ubuntu 12.04 is a LTS(long term surpport) version. The latest release version ubuntu 14.04 is a LTS version too.
+To install ubuntu operating system, I need to make a usb boot image first. Use the command "mount" to check which usb storage is mounted, for example /dev/sdb1, then use "mkfs -t vfat /dev/sdb1" to format it; use "dd if=ubuntu.iso of=/dev/sdb1 bs=2M" to build a usb boot device.
+
