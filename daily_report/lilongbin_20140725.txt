@@ -1,0 +1,5 @@
+I have installed a new operating system(ubuntu 14.04 of 64-bit). Then I need to configure the system as an embedded development environment.
+First of all, I should install vim which is a classic editor, vim is much stronger than vi, so I use "alias vi='vim'" to alias vim, when type vi the system will call vim instead. Then I configured the vim through vimrc file in current user's home directory, "set nu" to show line number, "set cindent" to select the indentation mode as C language.
+Then I configure the git because the default version in ubuntu 14.04 is git2.0, first of all, we have to use "git config --global user.name $user_name" and "git config --global user.email $user_email" to verify user'd identity; then use "git config --global push.default simple" or "git config --global push.default matching" to select the push method.
+When we use "git commit" the commit message default editor nano will be called, if we want to use vim we could use "select-editor" to select vim.gnome as the default one.
+
