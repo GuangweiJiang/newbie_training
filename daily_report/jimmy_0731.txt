@@ -1,0 +1,10 @@
+  Today is Thursday.The weather is hot.I spend 25 minutes
+to walk to company.
+  In the morning,I stil see the GPIO driver.Although watching
+the video about linux GPIO driver,I understand some about GPIO
+.But I still can not understand many about it.I need pay more 
+attention to this.
+  In the afernoon,we go to have a meeting.It is a training for
+new colleague.Something the HR tells is very important.The 
+computer for working is prohibited to download software.If the
+computer is found toxic,we will be punisded.
