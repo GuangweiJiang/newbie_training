@@ -1,0 +1,5 @@
+I will help test the Acoustic issue today. When I borrowed the test phones and configured the tools which will be used to flash images to the phones, I started to flash the newest images.
+When I use "adb devices" to connect to the device, I'm always noticed that "no permission". I copied the file "51-android.rules" to "/etc/udev/rules.d/" again, and tried once more, I was still noticed "no permission". I tried many times, but failed.
+I realized that we should use root instead of ordinary user to execute adb command after surfing the internet, typed "sudo adb devices", and I could see a series of number.
+But when I try to flash the images, I have the same trouble, use "sudo su" to change to root, then all would be OK.
+To collect logcat with timestamp, "adb logcat -v time" could be used.
