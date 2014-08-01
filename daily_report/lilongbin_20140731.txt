@@ -1,0 +1,5 @@
+I start to learn time and delays of kernel.
+The kernel exports a timer to ease the task of the driver writer who have to deal with the issue of timing more than implement the operations that control a device.
+The system's timing hardware generates timer interrupts at regular intervals; the interval is programmed at boot time by the kernel according to the value of HZ defined in <linux/param.h> or a subplat-form file included by it.
+And tick is the inverse of HZ, means the interval of interrupts. For example, HZ is equal to 100, means the platform runs at 100 interrupts per second, the tick is 100 ms.
+It is possible to change the value of HZ for those who want systems with a different clock interrupt frequency.
