@@ -1,0 +1,7 @@
+After I finished my newbir training report, I began to configure the gerrit accountedr.
+Guangwei has asked someone help create new gerrit accounter for me, and I have got the username and password, then I will login nts01.wistron.com website to register my email and add ssh key.
+I longin the website click "setting" and register my email address, use "ssh-keygen" and "ssh-add" command to create the ssh key, add the ssh key to the website.
+After I got "repo", I add it's directory to the system environment.
+I open a terminal and change directory to project, use "repo init -u ssh://n*.*.com/?/platform/manifest.git -b kk-release-2.2 -m wistron-kk-release-2.2.xml" to init the repo. But it's failed.
+I try to solve this problem by doing these steps again.
+
