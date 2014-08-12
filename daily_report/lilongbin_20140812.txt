@@ -1,0 +1,5 @@
+I continue to edit the powerpoint file I haven't finished yesterday.
+The usage of ctags scripts, taglist and cscope are added into the report. After I finished the editing, I start to configure the Ubuntu system so that I can telnet the linux server and show the usage of vim when I give a lecture on today's weekly meeting.
+At first, I was told that the gnome should be installed. So I try to install the gnome on my Ubuntu system, but failed.
+I try to install other softwares, such as xrdp, vnc4server and tightvncserver. After installing these software, I want to try to connect to my Ubuntu system from the windows 7 system.
+On click start, appendix, telnet to remote server, a dialogue will be displayed, type the Ubuntu system's IP, and I could see the login frame. Typing the username and password, I login the Ubuntu system successfully.
