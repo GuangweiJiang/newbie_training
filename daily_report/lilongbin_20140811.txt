@@ -1,4 +1,4 @@
 Today is the first day of this week, I will give a lecture about vim on this Tuesday.
 It takes me about one day to edit the powerpoint file, but it still wasn't finished.
-In this afternoon, Guangwei remind us some problems about git. One is that my git commit messages were too simple to understand them. These commit messages couldn't be plentiful any more. We often gain the file's information by reading the commit mesages. If the commit mesage is perfect we will yield twice the result with half the effort.
+In this afternoon, Guangwei reminds us some problems about git. One is that my git commit messages were too simple to understand them. These commit messages couldn't be plentiful any more. We often gain the file's information by reading the commit mesages. If the commit mesage is perfect we will yield twice the result with half the effort.
 The commit mesages could be writen more than one lines, and as plentiful as possible.
