@@ -1,0 +1,9 @@
+  Today is Wednesday.The weather is cold.Autumn is coming.
+  In the morning,I still read the book about GPIO and I2C.
+Perhaps it is my lock of knowledge of hardware,I have a 
+smattering of them.I need pay more attention to this.
+  In the afternoon,I help Guangwei do the test.I know how
+to use the commandabout fastboot."Adb reboot bootloader" 
+is used to enter fastboot mode."Fastboot oem unlock moto_pollux
+" is used to unlock fastboot."Fastboot flash boot boot boot.img"
+is used to burn the boot.img.

@@ -1,0 +1,10 @@
+  Today is Thursday.When I get up in the morning,it is raining.In rainy
+day,the traffic is very bad.It takes me a long time to the company.
+  I write a driver about globalmem today, when I compile it,there a lot of
+mistakes, debug it for a long time. Finally it can be successfully compiled
+.I follow the homework requirements about the use of some specified function.
+At the beginning, I can not understand why to do so,but slowly, I can understand
+.I use API such as register_chrdev_region,unregister_chrdev_region, cdev_alloc,
+cdev_init,cdev_add, cdev_del.The driver supports when you write text, it will
+help you to store up, then it can be displayed.It supports file operation functions
+such as open, release, read, write.

@@ -1,0 +1,7 @@
+  Today is Wednesday.The weather is cool.
+  In the morning,I help the new colleague get the computer 
+for working.Then I teach him how to set computer,and
+ how to send mail.He is new here,I need to help him
+.I tell him if he has trouble,he can ask me for help.
+  In the afternoon,I help to build the image of TC70GA
+.Then I learn how to creat node under proc.

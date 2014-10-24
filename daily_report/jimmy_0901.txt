@@ -1,0 +1,8 @@
+  Today is Monday.The weather is cool.I get up early.I have 
+a nice weekend.
+  In the morning,Guangwei let me test touch fw.First,I need 
+use command disable the touch.then I use mxt-app to flash 
+firmwave to chip.Finally,I need to enable the touch.But it 
+can only read the touch firmware version when it reboot.
+Guangwei teachs me how to modfiy the node.I try to modfiy some
+nodes,but it is not ok.I need to pay more attation on it.

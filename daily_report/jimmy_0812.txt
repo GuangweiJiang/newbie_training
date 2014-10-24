@@ -1,0 +1,12 @@
+  Today is Tuesday.The weather is not so hot.I spend
+30 minutes to walk to company.On the way to company,I
+buy three buns from shop named babi.The buns is very 
+delicious.
+  In the morning,I still learn the linux device driver
+about GPIO.In the afernoon,jerry teachs me some knowledge
+about touch driver.I try to use the command about adb.I 
+learn how to use abd.The touch driver about TC70 has issue
+.Guangwei let me do the test.He teachs me how to update the
+touch fw,and how to get the kernel log.I can judge the touch
+fw according to kernel log.
+

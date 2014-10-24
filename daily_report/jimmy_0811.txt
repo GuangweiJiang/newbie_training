@@ -1,0 +1,11 @@
+  Today is Monday.The weather is not so hot,because
+the fall is coming.I have not had time to buy breakfast
+,fortunately,I have a bottle of rice pudding in the office.
+  In the morning,I review the previous knowledge.I learn 
+what is VFS,and the working principle of VFS.Then I analysis
+how process transfer parameters to driver through the VFS.
+Parameters need go through two stages to set to driver.Although
+ this is knowledge of application,it is helpful to understand 
+the whole development process.
+  In the afternoon,I learn the linux device driver about GPIO.
+It cost me several days.Now I know how to complete it.

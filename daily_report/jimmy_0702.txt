@@ -1,0 +1,8 @@
+  Today is Wednesday.The weather is good.
+  I feel so productive today.I try to change the globalmem driver to misc driver,
+But it can not compile.I try to use the method that director teachs how
+to debug linux kernel.I finally find a pointer does not apply for the memory.Then,I
+learn ioctl about linux driver.I plan to complete the fourth homework tomorrow.
+  I do the second homework about algorithm.The second problem is not difficult.It need
+have the C landuage operation ideas.Suddenly I feel the training is very good,I need to
+chaerish.Through the probation period training,I can learn a lot.

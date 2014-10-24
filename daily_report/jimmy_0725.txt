@@ -1,0 +1,9 @@
+  Today is Firday.The weather is good.
+  In the morning,I read the book about the linux device driver.
+I know new concept about linux device driver,such as time,delay
+,and deferred work.Then the director let us show the homework 
+about linux driver.The code design is not good.He offers me some
+suggestions.
+  Then,we have a meeting.The director teachs us some knowledge 
+about electronic hardware.I feel it is really important.I feel 
+quite happy.I learn a lot in the new company. 

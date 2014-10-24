@@ -1,0 +1,10 @@
+  Today is Tuesday.The weather is a little hot.
+  In the morning,I write a char device driver.It can measure
+time lapses and compare time.The app execute while loop,it can
+canculate how much time it costs by the char driver.I learn a 
+lot of concepts,such as time_list,delay_work.Now I know how to 
+use it,but I am still confused about some concepts.I need pay 
+more attention to this.
+  In the afternoon,we have a meeting.Luna makes a report for us
+about patent.I am full of admiration for her.She has two patents
+.She tell us how to have ideas about patents.

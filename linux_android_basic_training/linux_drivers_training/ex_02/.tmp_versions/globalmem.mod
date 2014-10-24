@@ -1,0 +1,2 @@
+/home/kp/Desktop/newbie_training/linux_android_basic_training/linux_drivers_training/ex_02/globalmem.ko
+/home/kp/Desktop/newbie_training/linux_android_basic_training/linux_drivers_training/ex_02/globalmem.o

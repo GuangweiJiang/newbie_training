@@ -1,0 +1,10 @@
+  Today is Thursday, the weather is pretty good,I sleep particularly well.
+  Today I modify the C language homework that I do last week. I find myself
+C language level is poor,and many have forgotten how to write. Then I spend
+a lot of time to write a  program that is used to test the globalmem driver
+.When I compile the progrm,it appear a variety of compiler errors.Then I 
+spend some time to learn some knowledge about C language, and now begin to 
+find some sense of writting program. I think it is necessary to strengthen 
+my C language level. After going to write one to two C language program 
+every day.Well now I find the company has a lot of books I want to learn.I
+further believe that I do not come to the wrong place. I need to cherish this job.

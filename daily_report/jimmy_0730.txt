@@ -1,0 +1,11 @@
+  Today is Wednesday.The weather is hot.I get up late,but 
+I am not late for work fucklly.
+  In the morning,I read a book about GPIO.The device driver
+is different from the driver I write before.I need pay more 
+attention to this.Through learning this,I know what is GPIO
+,and it can be used for what.Then I see the homework about 
+GPIO driver written by Allan and zhouzhou.There are great 
+differences between them.I feel very confused.I need understand
+it,because it is very important.We can not see the video in
+the company.I buy a lot of linux driver video from tao bao.I 
+am going to go to back to watch the video.

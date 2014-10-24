@@ -1,0 +1,9 @@
+  Today is Friday.The weather is rainy and windy.
+  In the morning,I spend a lot of time to read the book about
+GPIO.Then luna let me help her.Her computer can not build image
+.I am not good at solving the problem.I spend a lot of time to
+help her solve the problem.I learn a lot from it.I know how to 
+config the linux system and some ways to solve the problem about 
+linux config.In the afternoon,I watch the training video online.
+There are a lot of videos need to be watched.Then I spend a lot 
+of time to write C landuage code.

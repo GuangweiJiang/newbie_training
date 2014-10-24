@@ -1,0 +1,9 @@
+  Today is Thursday.The weather is good.
+  In the morning,I finally solve the problem about the computer system.
+The problem has been bothering me for a week.When I build the image,it 
+shows different errors every time.Because of the problem,I do not read 
+the book about linux driver for several days.
+  Now it can build image,and it generates file I need.Although it spends
+a lot of time,I really learn a lot.I know how to configure the environment
+ of linux.I know how to solve  error about the linux system.
+  Next,I need spend more time to learn linux driver. 
