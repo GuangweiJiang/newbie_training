@@ -1,0 +1,8 @@
+Today I complete my NO.7 exercise in the Mango system.
+I use the programming of the NO.3 exercise to make true.I move the programming
+to the dictionary /alps/kernel/drivers/char.Then I change the makefile,use the
+command ./mk -t new k and ./mk -t bootimage to bootimage.At last I write some
+words to the Mango system.
+Tommorrow I will have a training for the new employee.Because I have lost two
+days for reinstalling the computer system ,that means I need to have big steps
+to catch up with the schedule that I make at first.

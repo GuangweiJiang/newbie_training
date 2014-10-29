@@ -1,0 +1,8 @@
+Today I mainly complete two tasks.
+In the morning,I look back the kernel module and summarize what I made yesterday.
+In addition, I remember the initialization function and the clear function. 
+I read some solutions about errors in the initialization.
+In the afternoon,I learn the char drivers. What I have mainly learned is the
+design of scull and the major and minor numbers. We usually use the dynamic 
+allocation numbers. This method is a mainstream.
+Also, I participate in the  weekly meeting.

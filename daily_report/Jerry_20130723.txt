@@ -1,0 +1,8 @@
+Today I begin the NO.6 exercise of the linux driver training.
+The exercise is about time, delays, and deferred work. In the real device
+driver it usually has the functions of timing and memory management .The
+exercise will help me tell the difference of time ,compare with time ,git
+the real time  and so on. I read some books  about the  jiffies  ,time_
+after(_eq), time_before(_eq),  mdelay ,HZ .They are widely used to the
+training programming.
+Tomorrow I will keep write the programming until finishing the exercise.

@@ -1,0 +1,8 @@
+Today I keep reistalling the computer system.
+During the period,my colleague Albert tries many times to make my computer 
+get work.The computer seems can not work any more. Even one of times we 
+reistall the computer successfully,there are a lot of functions I can not
+use in the computer.Meanwhile I read some books about the GPIO for the NO.8
+exercise of the linux driver training.
+In the evening,Albert makes it. The computer system comes back.Thank goodness.
+At that mement, I just want to say thank you very much Albert.

@@ -1,0 +1,10 @@
+Today I finish the NO.5 training of the linux driver.
+There is a error about the programming. At  the beginning I read a lot of header
+file materials about the problem on the internet . But the error still exists.
+At last I find a  analogous programming on the internet. It does not use the
+function init_MUTEX(). It uses the function sema_init(). I imitate the programming.
+Then the error is solved.
+In the afternoon my colleague Albert recommend a website about the linux device
+driver . It contains many Summaries which are written by someone who also starts
+learning the linux device driver from zero. Thank very much for the website from
+Albert.  

@@ -1,0 +1,8 @@
+Today I have two tasks to do.
+In the morning I mainly do a research on the N0.8 traning about GPIO.About the
+GPIO my colleague Albert gives me a dirction, when I feel puzzled. He gives
+me a data book about the ARM and tells me the usages of the registers.
+In the afternoon I mainly listen the courses of new training online.There are
+five courses I must learn.Two of them need to be tested.They are MFG_KM 
+introduction and SA8000 stardard introduction.
+Tomorrow I will be committed to learn how to set up hudson and to configure.

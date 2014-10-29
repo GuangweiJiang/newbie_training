@@ -1,0 +1,10 @@
+In the morning there is no lesson of the new staff training. I modify the first
+weekly programming. First of all, I use the bubble  sort algorithm which has
+many time and space complexities.After reading the book Programming Pearls, I
+learn the new method which is bitmap sort.The way will conserve memory and have
+a higher rate to finish the programming.
+In the afternoon I have a lesson that is about abnormal quality. The company 
+has a rigorous process to test the abnormal quality and solve all kinds of 
+problems. Until the QA leader agrees to cancle the abnomal quality,the production 
+can be recovered. At last the teacher emphasizes the importance of details about
+the quality.

@@ -1,0 +1,8 @@
+Today I learn the spin lock which is another way for the concurrency and race
+conditions. The main difference between spin lock and the semaphore that I
+learned yesterday is the size of critical sections.The former is suit the small
+critical sections,or it will be endless loop. The later is good at the big
+critical sections. All thought there are still many methods to solve the
+concurrency problem, they are not widely used.
+At last I write a driver for the NO.5 exercise. There is a error about the
+driver. So I will check out next week.

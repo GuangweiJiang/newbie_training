@@ -1,0 +1,11 @@
+Today my foremost task is knowing more linux commanders.
+Facing the new operating system which is called linux,I feel powerless at first.
+Suddenly I get something ,when I read a book that the leader recommend for me 
+about linux.From the book I have a new understanding about the operating system.
+Using the system in a text mode is better than graphical interface,especially 
+for the problem of install.It will easily grasp the operational state of linux.
+Also,it is convenient to know the meaning of the system install.
+That is to say,I need to know more orders about linux and word processor.There 
+are some orders commonly used,include cat cd cp mkdir ls git and so on.
+Next stage ,I will be committed to learning device drive.Meanwhile,it is 
+important to be skilled of linux orders.

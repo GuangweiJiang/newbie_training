@@ -1,0 +1,9 @@
+Today I write the device driver of the fourth exercise .
+In the exercise I did not make many mistakes. I find I just have an integral
+understanding about the linux device driver.The fourth exercise is about the
+ioctl in the driver.It is used to control the hardware.It is common in the 
+most driver.
+Tomorrow I will begin my training for the new staff. It means I do not have
+much time to learn the new things about the linux driver .But I would 
+be going to review and improve the training what I have done at the last two
+weeks.

@@ -1,0 +1,9 @@
+I have read the linux device drivers many days. It is time to do some exercises.
+Today I complete a easy task.
+My first linux_driver_training is not hard. I just need to write a simple kernel
+module,while I write a makefile to compiled the kernel module. When I use the 
+command insmod to load ,there is a problem  that will show me 'operation not 
+permitted'.After asking my colleague,I get the answer that is the command sudo.
+When I prepare to do the second exercise ,I have many troubles. I have found 
+that what I had learned previously is not very well. Especially node I do not 
+understand entirely.

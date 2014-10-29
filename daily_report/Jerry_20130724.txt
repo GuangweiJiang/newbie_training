@@ -1,0 +1,8 @@
+Today I keep doing the NO.6 exercise of the linux driver training.
+First of all, I write the programming of the current time.It is not very 
+difficult for me. Then I begin to measure time lapses and compare times in the
+programming.In this turn I do not understand well at first,but I make it after
+refering the examples online.At last the function of delaying operation for a
+specified amount of time makes me puzzled.I do not have a good condition,maybe
+I did not sleep well last night.
+Tommorrow I hope that I will keep a nice status to learn.

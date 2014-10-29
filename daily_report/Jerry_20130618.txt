@@ -1,0 +1,10 @@
+Today I go on learning the writing of makefile and the usage of GDB.
+In the morning,I mainly look for the information of makefile. I get something
+different from yesterday when I have seen. When we write a makefile rule,we
+still find many same file names. They make the makefile very complex.To solve
+the problem we use the variable instead of the same file names.There are more
+usages of makefile on the internet .
+In the afternoon, my main job is learning the use of GDB.It is a important tool
+to debug the programming. By the way , I attend a meeting with my colleagues. The
+meeting is aimed at summarizing what we did last week. At last we talk about
+the patent. Some  colleagues have many nice ideas.

@@ -1,0 +1,9 @@
+Today I need to solve the problem between administertor and user in hudson at
+first.After trying many times, my colleague,zhou Zhou,find the key to the 
+problem.The user's file path is different from the path in the hudson configuration
+Next step,I will learn how to creat a project after applying for a node as a 
+user.Then I need to configure the security and source code management and so on.
+I do the exercise twice. Now I have a little familiar with them.As a user the 
+most important thing is adding script.There are five steps about the it.They 
+are build and reflash image,WCIS test,CTS test,Monkey test and Benchmark test.
+Tommorrow I will learn them.

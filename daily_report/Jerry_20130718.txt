@@ -1,0 +1,9 @@
+When I finish the new staff training ,I begin with the linux driver training.
+Today my task is NO.5 exercise. It is about concurrency and race conditions.
+When 2 or more applications manipulate a device at the same time, it may cause
+the race. It will lose the memory. To avoid the serious problem we usually
+the method of semaphore or the method of spin_lock. In my exercise I use the
+semaphore. It needs to initialize the mutex lock ,to acquiring semaphore and
+to release the semaphore.
+Tomorrow I will keep finishing the NO.5 exercise and reading some materials
+about the method of spin_lock.

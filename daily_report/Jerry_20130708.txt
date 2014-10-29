@@ -1,0 +1,9 @@
+Today I get the e-mail about the training of new staff. In the next week, I
+will take part in the training to learn the corporate Culture. The training 
+will help us adapt the new environment easily and know the basic knowledge 
+about the company.Because of the training,I have to change my linux drive 
+schedule.
+ Meanwhile I begin to do the fourth exercise of the linux driver training. 
+ It is about the  kernel driver  that must used __put_user/copy_to_user and
+ __get_user/copy_from_user. It has some differences compared with the one 
+ I completed last week.Today I just reed some books about the kernel driver.

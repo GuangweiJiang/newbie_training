@@ -1,0 +1,8 @@
+Today I go on writing the exercise2 about the linux_drivers_training.
+I have completed an integral device driver, but there are a lot of errors and 
+warnings with that .The driver is included five file operations (read,write,
+open,release,ioctl).Of course ,I imitate some templates. Because of those 
+templates in low version,my driver has many warnings.Meanwhile the errors in 
+the driver are cleaned with the help of my colleague at last.The reasons have 
+many kinds.
+Next week I will write a programming to test the driver.
