@@ -1,0 +1,3 @@
+As an embedded software developer, Being familiar with the working principle of the hardware, embedded software and operating system is necessary. I make a plan to improve the ability to program.
+By reading "Microcomputer Principle and Interface Technology" can help us understand the working principle of computer well, "Advanced Programming in the UNIX Environment" can improve our ability of operating system and basic programming, whereas these books are so expensive. The book "Linux Application Development (Second Edition)" bought by Guangwei is also an excellent reference resource.
+The fingering is also quite important. A touch typist likes to keep his fingers on the home row, and this could help him improve his high speed type.

@@ -1,0 +1,5 @@
+Yesterday when I configured my accounter,opened a terminal and changed directory to project, I used "repo init -u ssh://n*.*.com/?/platform/manifest.git -b kk-release-2.2 -m wistron-kk-release-2.2.xml" to init the repo. It was failed.
+I create the ssh key again, and add the new ssh key to the website. I try again to init repo, but still failed yet.
+I ask others for help, I was told that I should also modify the config file in the ssh key directory. Then I add host, username and port to the config file.
+Try again, I was noticed to type username and user's email, then the repo was initialized successfully.
+I will use "repo sync" to pull the source code, and then build the image. 

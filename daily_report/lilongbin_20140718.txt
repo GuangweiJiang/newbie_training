@@ -1,0 +1,4 @@
+I try to modify the application because I realized that there are some problems in the application I designed yesterday.
+In the algorithm yesterday, the processing of the first node and other nodes are different, the reason is the first time to join the list is NULL.
+In order to facilitate the operation, I need to join a head node to the list of the head. Head node types in accordance with the type of data nodes. So even if the linked list is NULL, the head pointer variable is not NULL. Head node to join these problems no longer exist.
+Head node joins completely for operation convenience. It's data domain hasn't been defined, the pointer field is to store the first data node address, it will be NULL if the linked list is empty.

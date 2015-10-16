@@ -1,0 +1,5 @@
+After finishing the new staff training, I go on programming the linked list functions.
+I defined a structure named worker contains of id, name, gender, age and a pointer pointed to the next element. And I designed the basic operations include to create linked list, to insert node in the linked list, to delete nodes in the chain table, to traverse the contents of the linked list and destroy list, etc.
+After I put the program debugging through, I begin to learn the linux driver training which is about concurrency and race conditions.
+When more than one applications manipulate a device at the same time, it may cause the race condition and may cover the shared memory data. We usually use the method of semaphore or spin_lock to avoid this problem.
+

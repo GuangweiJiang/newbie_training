@@ -1,0 +1,5 @@
+I continue taking part in the training to learn the enterprise Culture which will help us adapt the new environment easily and know the basic knowledge about the company.
+After class, I begin to study how to use the extra argument in the ioctl method.
+If it is an integer, it can be easily used directly; if it is a pointer, however, some care must be taken. When a pointer is used to refer to user space, we must ensure that the user address is valid. Address verification (without transfering data) is implemented by the function access_ok, which is declared in <asm/uaccess.h>.
+Unlike most kernel functions, access_ok returns a boolean value; 1 for succes and 0 for failure. If it returns false, the driver should ususally return -EFAULT to the caller.
+

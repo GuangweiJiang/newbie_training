@@ -1,0 +1,5 @@
+Misc device drivers belong to char device drivers, they are simple char drivers that share certain common characteristics. The kernel abstracts these commonlities into an API, and this simplifis the way these drivers are initialized. All misc devices are assigned a major number of 10, but each can choose a single minor number. So if a char device driver needs to drive multiple devices, it's probably not a candidate for being a misc driver.
+A char device driver performs initialization steps via alloc_chrdev_region, class_create, device_create, cdev_init and cdev_add. whereas a misc driver accomplishes all this with a single call to misc_register. Each misc driver automaticlly appears under /sys/class/misc without explicit effort from the driver writer.
+The structure miscdevice, defined in <linux/miscdevice.h>, is the most important data structure used in misc driver. The miscdevice structure contains parts of information about the miscdevice. We may request a minor number to be dynamiclly assigned by specifying MISC_DYNAMIC_MINOR int the structure. 
+To remove a misc driver from the system call misc_deregister.
+

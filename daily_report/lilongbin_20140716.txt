@@ -1,0 +1,4 @@
+Today, I start to design a simple list and some basic operations.
+In order to establish the linear relationship between data elements, for each data element, when storing data element itself information, storing the address of the element after him is needed, a node contains of the two pieces of information.
+Linked list storage structure is a dynamic management. Each node in the list the storage space is not pre-allocated, but running system according to the need to generate. So establish a single linked list starting from an empty table, each read an element is to apply for a node, and then inserted into the list.
+

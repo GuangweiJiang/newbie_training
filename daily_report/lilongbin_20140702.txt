@@ -1,0 +1,5 @@
+I have biult a char device driver module yesterday, but I'm not quite understanding the details of the implementation. So I spent a lot of time to analysis this question.
+The register_chrdev_region, alloc_chrdev_region and unregister_chrdev_region used to allow a driver to allocate and free ranges of device numbers. register_chrdev_region should be used when the desired major number is known in advance; for dynamic allocation, use alloc_chrdev_region instead.
+There are three important data structures used by most device drivers, that is struct file_operations, struct file, and struct inode. The file_operations structure holds a char driver's methods; struct file represents an open file, and struct inode represents a file on disk. The struct file_operations contains a series of operations, such as open, release, read, write, ioctl, etc.
+The cdev_init, cdev_add, and cdev_del are the functions for the management of cdev structures, which represent char devices within the kernel.
+The function class_create and class_destroy are used to create and destroy a device class. We use device_create and device_destroy to create and destroy a device file automaticlly.

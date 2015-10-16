@@ -1,0 +1,5 @@
+It takes me a long time to learn enterprise culture before I start to learn ioctl methods today.
+The implement of ioctl is usually a switch statement based on the command number. Although the ioctl system calls is most often used to act on devices, a few commands are recognised by the kernel. Note that thiese commands, when applied to our device, are decoded before our own file operations are called.
+Thus, if we choose the same number for one of our ioctl commands, we won't ever see any request for that command, and the application gets something unexpected because of the conflict between the ioctl numbers.
+The predefiend commands are those that can be issued on any file, and those that are issued only on regular files, and those specific to the filesystem type.
+

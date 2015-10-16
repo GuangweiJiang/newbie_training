@@ -1,0 +1,6 @@
+Today I heard that centos 7 had realeased a few days, and there are many improvements int the new edition.
+So I tried to install the system on a free computer, which has been installed a ubuntu system only. Before installing another system, I must study the linux boot principle.
+I read some information about the bootloader of ubuntu called grub2 updated from grub which means grand unified bootloader, and the linux kernel boot steps, and something about installing system. I know that the bootloader has been updated to grub2 which is different from grub in many commands.
+I find that the command "root" has been removed, and "kernel" has been replaced by "linux".
+I put the installation file to the root directory of ubuntu, and release "LiveOS" and "isolinux" to the root directory too. Then reboot the system, change to grub command mode, type "set root=(hd0,msdos1) >linux /isolinux/vmlinuz linux repo=hd:/dev/sda1:/ >initrd /isolinux/initrd.img >boot" to boot the new system's installation.
+If we want to learn how linux works, the redhat and centos linux system are the best selections.

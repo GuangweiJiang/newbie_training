@@ -1,0 +1,9 @@
+Today I continue to studay the kernel module.
+There are various differences between a kernel module and an application.
+While most small and medium-sized applications perform a single task from beginning to end, every kernel module just registers itself in order to serve future requests, and its initialization function terminates immediately.
+The task of the module's initialization function is to prepare for later invocation of the module's functions; this kind of approach to programming is similar to event-driven programming, but while not all applications are event-driven, each and every kernel module is.
+The exit function of a module must carefully undo everything the init function built up, or the pieces remain around until the system rebooted, whereas an application that terminates can be lazy in releasing resources or avoid clean up altogether.
+Because no library is linked to modules, source files should never include the usual header files, <stdarg.h> and very special situations being the only exceptions. Only functions that are actually part of the kernel itself may be used in kernel modules.
+Another important difference between kernel programming and application programming is in how each environment handles faults. whereas a segmentation fault is harmless during application development, a kernel fault kills the current process at least, if not the whole system.
+A module runs in kernel space, whereas applications run in user space.
+

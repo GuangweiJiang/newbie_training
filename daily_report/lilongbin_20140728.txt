@@ -1,0 +1,4 @@
+I start to configure the environment to build android image.
+After installation the basic library, we need to download jdk-6u41-linux-x64.bin, and then release to /usr/lib/jvm/, append "/usr/lib/jvm/jdk1.6.0_41/bin" and "/usr/lib/jvm/jdk1.6.0_41/jre" to the profile located at my home directory.
+Then I change to the android source directory and start to build, it takes a long time but failed. Then I configure the command route to /etc/profile and try again, the boot.img can not be generated, I haven't found a way to solve this problem so far.
+Because lack of understanding of android and java, I learned some basic concepts, such as jdk means java development kit, jre is java running environment, and when we build an android image the target will be generated to the out folder.

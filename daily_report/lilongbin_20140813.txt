@@ -1,0 +1,6 @@
+Today I continue to verify the devmem2.static utility, since of the result was not so good yesterday.
+I downloaded the devmem2.static file and add executive pemission, use "adb remount" and "adb push dev2mem.static /system/bin/", then "adb shell dev2mem.static 0x00706024 w", but the return value is always 0x0.
+Andrew told me that I should use "fastboot flash sbl3 sbl3_shk.mbn" and "fastboot reboot", then read jtag id by "adb shell dev2mem.static 0x007060E0 w" to check the tool first, then try to do what I have done yesterday again.
+I tried again, and the result is also failed. I send an email to him appending my operation steps.
+He said the machine should be rebooted twice, and I do by this again.
+At last, I could see the return value is 0x1BFC0000.
